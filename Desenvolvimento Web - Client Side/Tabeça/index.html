@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Primeira Página</title>
+</head>
+<body>
+    <!-- UL AND OL LIST-->
+<h1>LISTA UL</h1>
+
+<ol>
+    <li>Index</li>
+    <li>Page 2</li>
+    <li>Contacts</li>
+</ol>
+<br />
+<ul>
+    <li>Telefone</li>
+    <li>Nome</li>
+    <li>Email</li>
+</ul>
+
+<!--TABLES-->
+<!--TH Table header-->
+<!--TR Table Row-->
+<!--TD Table Data-->
+<h1>TABLE</h1>
+<table border="1px">
+    <tr>
+        <th>NOME</th>
+        <th>TELEFONE</th>
+        <th>IDADE</th>
+    </tr>
+    <tr>
+        <td>Joao</td>
+        <td>9238438</td>
+        <td>23</td>
+    </tr>
+
+    <tr>
+        <td>Miguel</td>
+        <td>9238438</td>
+        <td>34</td>
+    </tr>
+
+</table>
+
+<br />
+<br />
+<br />
+<!--FORMULARIO-->
+<!--pattern-->
+<h1>Formulário de Registo</h1>
+<form action="./destino.php" method="post">
+    <label for="login"></label>
+    <input type="text" id="login" name="login" placeholder="Digite o Email" style="display: block;" maxlength="8" required />
+    <label for="pass"></label>
+    <input type="password" id="pass" name="pass" placeholder="Digite a Palavra-chave"  style="display: block;" maxlength="8" required />
+
+    <input type="number" placeholder="Number" style="display: block;"/>
+    <input type="date" placeholder="Number" style="display: block;"/>
+
+    <input type="submit" name="sb"  style="display: block" />
+
+    <input type="text" list="cidade" />
+    <datalist id="cidade">
+        <option value="Porto">Porto</option>
+        <option value="Lisboa">Lisboa</option>
+        <option value="Porto">Algarve</option>
+    </datalist>
+    
+
+</form>
+    
+</body>
+</html>
