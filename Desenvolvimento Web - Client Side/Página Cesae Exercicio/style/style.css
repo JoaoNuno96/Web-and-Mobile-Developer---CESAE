@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER STYLES */
+
+#header{
+    width: 100%;
+}
+
+.div-header-text{
+    background-color: #25183e;
+    display: flex;
+    margin: auto;
+    height: 60px;
+}
+
+.text-header{
+    color: #FFF;
+    font-size: small;
+    margin: auto;
+    align-self: center;
+}
+
+/*ICON EMAIL */
+
+.icon-email{
+    margin: auto;
+    align-self: center;
+}
+
+.div-header-nav{
+    /*background-color: #a50606;*/
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1870px;
+}
+
+
+.nav-bar-div ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.nav-bar-div ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+
+
+.div-cesae{
+    /*border: 2px solid yellow; */
+    width: 400px;
+}
+
+/* IMAGEM CESAE */
+
+.image-cesae{
+    height: 100px;
+    max-width: 100%;
+}
+
+
+
+
+/* CONTAINER STYLES */
+
+#imagem{
+    height: 400px;
+    background: linear-gradient(rgb(0,0,0,0.500),rgb(0,0,0,0.500)), url("../img/pessoas_trabalhar.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
