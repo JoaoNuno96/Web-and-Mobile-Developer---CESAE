@@ -40,7 +40,8 @@
     /* border: 2px solid red; */
     display: flex;
     justify-content: space-between;
-    max-width: 1870px;
+    max-width: 1500px;
+
 }
 
 
@@ -51,7 +52,7 @@
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
-
+    margin-right: 20px;
 }
 
 .nav-bar-div ul li a{
@@ -62,10 +63,6 @@
     font-weight: bold;
 }
 
-
-
-
-
 .div-cesae{
     /*border: 2px solid yellow; */
     width: 400px;
@@ -75,11 +72,8 @@
 
 .image-cesae{
     height: 100px;
-    max-width: 100%;
+    
 }
-
-
-
 
 /* CONTAINER STYLES */
 
@@ -89,4 +83,27 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+.hamburgo i{
+    display: none;
+}
+
+
+/*MOBILE */
+
+/* RESPONSIVE */
+
+@media (max-width:1000px){
+    .nav-bar-div ul{
+        display: none;
+    }
+
+    .hamburgo i{
+        display: flex;
+        margin-right:30px ;
+        color: black;
+        
+    }
+
 }
