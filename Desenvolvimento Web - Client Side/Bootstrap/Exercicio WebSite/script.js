@@ -40,33 +40,72 @@ function voltar()
       });
 }
 
+function formulario()
+{
+    window.scroll({
+        top: 3400,
+        left: 100,
+        behavior: "smooth",
+      });
+}
+
 function registarFofoca()
 {
+    var nome = document.getElementById("nomeHistoria").value;
     var texto = document.getElementById("historia").value;
 
     if(texto == "")
-    {   
-        //div row
-        var divRow = document.getElementById("div");
-        divRow.classList.add("row");
-
-        //div col
-        var divCol = document.createElement("div");
-        divCol.classList.add("col");
-
+    {  
         //Elemento alert
         var div = document.createElement("div");
         div.classList.add("alert");
         div.classList.add("alert-warning");
+        div.classList.add("text-center");
         div.role = "alert";
         div.innerHTML = "Por favor, verifique se tem algum texto na historia."
-
 
         document.getElementById("formulario").appendChild(div);
     }
     else
     {
+       
+        var index = localStorage.length + 1;
+        localStorage.setItem(index,texto);
+    }
+
+    document.getElementById("nomeHistoria").value = "";
+    document.getElementById("historia").value = "";
+
+}
+
+function receberFofocas()
+{
+    var arr = [];
+
+    //ciclo para adicionar texto de local storage no arr
+    for(var o = 1; o <= localStorage.length; o++)
+    {
+        arr.push(localStorage.getItem(o));
+    }
+
+    //ciclo de arr com mensagens string do localstorage
+    for(var i in arr)
+    {
+        //criar elemento de table row e table data
+
+        var tr = document.createElement("tr");
+        var td = document.createElement("td");
+
+        td.innerHTML = arr[i];
+
+        tr.appendChild(td);
+
+        document.getElementById("tabela").appendChild(tr);
 
     }
 
 }
+
+window.addEventListener("load",function(){
+    receberFofocas();
+})
