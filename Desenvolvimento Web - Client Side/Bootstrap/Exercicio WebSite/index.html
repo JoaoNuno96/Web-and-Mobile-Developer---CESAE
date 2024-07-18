@@ -13,43 +13,41 @@
     <!-- NAVBAR INICIO -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Para tu veres</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#" onclick="navegacao('home')">Para tu veres</a>
+        <!-- HAMBURGO BUTTON DROP DOWN INICIO -->
+        <button id="buttonHomeBar" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Para tu veres</h5>
+            <button id="closeButton" type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('home')">Home</button>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('comecar')">Começar</button>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+              <li class="nav-item">
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('noticias')">Notícias</button>
               </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('fofoquices')">Fofoquices</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('formulario')">Formulário</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn btn-outline-dark nav-link" aria-current="page" onclick="navegacaoLateral('contactos')">Contactos</button>
+              </li>
+              
             </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
+        <!-- HAMBURGO BUTTON DROP DOWN INICIO -->
       </div>
     </nav>
   </header>
@@ -68,7 +66,7 @@
             <hr class="my-4">
             <p>O nosso site tem um sistema de fidedignidade, que faz com que os utilizadores tenham liberade de postar algo sem serem sujeitos a comentários como "és mesmo cusco", ou "não tens vergonha de ser assim?".</p>
             <p class="lead mt-4">
-              <a class="btn btn-primary btn-lg" onclick="comecar()" role="button">Começar</a>
+              <a class="btn btn-outline-primary btn-lg" onclick="navegacao('comecar')" role="button">Começar</a>
             </p>
           </div>
         </div>
@@ -84,10 +82,10 @@
           <p class="card-text">Os utilizadores vão conseguir escolher entre as ultimas noticias, ou poderam aceder à area dos posts onde poderam ler e criar post de fofocas pessoais. </p>
           <div class="row">
             <div class="col-6">
-              <a onclick="noticias()" class="btn btn-primary">Deixa-me ver as noticias!</a>
+              <a onclick="navegacao('noticias')" class="btn btn-primary">Deixa-me ver as noticias!</a>
             </div>
             <div class="col-6">
-              <a onclick="fofoquices()" class="btn btn-primary">Queria ver umas fofoquices.</a>
+              <a onclick="navegacao('fofoquices')" class="btn btn-primary">Queria ver umas fofoquices.</a>
             </div>
           </div>
           
@@ -98,14 +96,13 @@
     </div>
     <!-- JUMBOTRON DE BOAS VINDAS - FIM -->
 
-    <div class="display-6 text-center">Notícias</div> 
-
+    <div class="display-6 text-center" style="margin-top: 400px;" >Notícias</div> 
     <!-- CONJUNTO CARTOES INICO -->
 
     <div class="container text-center">
-
+      <hr class="my-4">
       <!-- LINHA 1 INICO -->
-      <div class="row mt-5">
+      <div class="row">
 
         <!-- LINHA 1 CARTAO 1 INICIO-->
         <div class="col">
@@ -232,8 +229,8 @@
 
       <div class="container text-center">
         <div class="row">
-          <div class="col">
-            <a onclick="voltar()" class="btn btn-primary">Voltar</a>
+          <div class="col" style="margin-right: 110px; margin-top:50px ;">
+            <a onclick="navegacao('home')" class="btn btn-primary btn-lg">Voltar</a>
           </div>
         </div>
       </div>
@@ -266,11 +263,14 @@
         </div>
 
         <div class="row mt-5">
-          <div class="col-6">
-            <a onclick="formulario()" class="btn btn-primary">Escrever uma história</a>
+          <div class="col">
+            <a onclick="navegacao('formulario')" class="btn btn-primary">Escrever uma história</a>
           </div>
-          <div class="col-6">
-            <a onclick="voltar()" class="btn btn-primary">Voltar</a>
+          <div class="col">
+            <a onclick="recarregarWindow()" class="btn btn-primary">Atualizar tabela</a>
+          </div>
+          <div class="col">
+            <a onclick="navegacao('home')" class="btn btn-primary">Voltar</a>
           </div>
         </div>
 
@@ -312,9 +312,34 @@
     </div>
     <!-- FORMULARIO  DE FOFOCAS - FIM -->
 
-    <div style="margin-top: 400px;" >
+    <!-- CONTACTOS - INICIO -->
+    <div class="container text-center">
+      <div class="row" style="margin-top: 400px;" id="questao">
 
+        <div class="col">
+          <h5 class="display-6" >Contactos</h5>
+          <p class="card-text">Para mais informações clique na ligação abaixo.</p>
+          <div class="row">
+            <div class="col">
+              <a onclick="navegacao('noticias')" class="btn btn-primary mb-5">Contactos</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
+    <!-- CONTACTOS - FIM -->
+
+    <footer class="d-flex flex-wrap justify-content-between text-center align-items-center py-3 border-top bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="text-white fw-bold">Para tu veres</p>
+            <p class="text-white fw-light">Relembrando a todos os fofoqueiros que este site está online da 00:00 até às 24:00.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   
 

@@ -2,53 +2,120 @@
 //Clicar botao
 //disparar acçao -> auto scroll 100px
 
-//COMEÇAR TRANSITAR PARA QUESTOES
-function comecar()
+//TRANSIÇÕES___________________________________________________________
+//CADA ARGUMENTO REPRESENTA A DIRECÇÃO A TOMAR
+
+function navegacao(direccao)
 {
-    window.scroll({
-        top: 620,
-        left: 100,
-        behavior: "smooth",
-      });
+    if(direccao == "home")
+    {
+        window.scroll({
+            top: 0,
+            left: 100,
+            behavior: "smooth",
+          });
+    }
+    else if(direccao == "comecar")
+    {
+        window.scroll({
+            top: 620,
+            left: 100,
+            behavior: "smooth",
+          });
+    }
+    else if(direccao == "noticias")
+    {
+        window.scroll({
+            top: 1350,
+            left: 100,
+            behavior: "smooth",
+          });
+    }
+    else if(direccao == "fofoquices")
+    {
+        window.scroll({
+            top: 2900,
+            left: 100,
+            behavior: "smooth",
+          });
+    }
+    else if(direccao == "formulario")
+    {
+        window.scroll({
+            top: 3550,
+            left: 100,
+            behavior: "smooth",
+          });
+    }
+}
+
+//TRANSIÇÕES DE BARRA LATERAL___________________________________________________________
+//CADA ARGUMENTO REPRESENTA A DIRECÇÃO A TOMAR
+
+function navegacaoLateral(direccaoLateral)
+{
+    if(direccaoLateral == "home")
+    {
+        window.scroll({
+            top: 0,
+            left: 100,
+            behavior: "smooth",
+          });
+        document.getElementById("closeButton").click();
+    }
+    else if(direccaoLateral == "comecar")
+    {
+        window.scroll({
+            top: 620,
+            left: 100,
+            behavior: "smooth",
+          });
+        document.getElementById("closeButton").click();
+        document.getElementById("botaoLateralHome").classList.add("active")
+    }
+    else if(direccaoLateral == "noticias")
+    {
+        window.scroll({
+            top: 1350,
+            left: 100,
+            behavior: "smooth",
+          });
+        document.getElementById("closeButton").click();
+    }
+    else if(direccaoLateral == "fofoquices")
+    {
+        window.scroll({
+            top: 2900,
+            left: 100,
+            behavior: "smooth",
+          });
+        document.getElementById("closeButton").click();
+    }
+    else if(direccaoLateral == "formulario")
+    {
+        window.scroll({
+            top: 3550,
+            left: 100,
+            behavior: "smooth",
+          });
+        document.getElementById("closeButton").click();
+    }
+
+    else if(direccaoLateral == "contactos")
+        {
+            window.scroll({
+                top: 4100,
+                left: 100,
+                behavior: "smooth",
+              });
+            document.getElementById("closeButton").click();
+        }
 
 }
 
-function noticias()
-{
-    window.scroll({
-        top: 1150,
-        left: 100,
-        behavior: "smooth",
-      });
-}
+//LOCAL STORAGE___________________________________________________________
 
-function fofoquices()
-{
-    window.scroll({
-        top: 2650,
-        left: 100,
-        behavior: "smooth",
-      });
-}
-
-function voltar()
-{
-    window.scroll({
-        top: 0,
-        left: 100,
-        behavior: "smooth",
-      });
-}
-
-function formulario()
-{
-    window.scroll({
-        top: 3400,
-        left: 100,
-        behavior: "smooth",
-      });
-}
-
+//REGISTAR EM LOCALSTORAGE
 function registarFofoca()
 {
     var nome = document.getElementById("nomeHistoria").value;
@@ -56,8 +123,9 @@ function registarFofoca()
 
     if(texto == "")
     {  
-        //Elemento alert
+        //Elemento ALERT - PARA VERIFICAR OS DADOS
         var div = document.createElement("div");
+        div.id = "alertaAmarelo";
         div.classList.add("alert");
         div.classList.add("alert-warning");
         div.classList.add("text-center");
@@ -65,19 +133,32 @@ function registarFofoca()
         div.innerHTML = "Por favor, verifique se tem algum texto na historia."
 
         document.getElementById("formulario").appendChild(div);
+
     }
     else
     {
+        //Elemento ALERT - SUCESSO NOS DADOS INSERIDOS
+        var div = document.createElement("div");
+        div.classList.add("alert");
+        div.classList.add("alert-success");
+        div.classList.add("text-center");
+        div.role = "alert";
+        div.innerHTML = "Sucesso, o item foi inserido na tabela de fofoquices!";
+
+        document.getElementById("formulario").appendChild(div);
        
         var index = localStorage.length + 1;
         localStorage.setItem(index,texto);
     }
 
+    //LIMPAR CAMPOS DO FORMULARIO
     document.getElementById("nomeHistoria").value = "";
     document.getElementById("historia").value = "";
 
+
 }
 
+//RECUPERAR DE LOCAL STORAGE TODAS AS FOFOCAS
 function receberFofocas()
 {
     var arr = [];
@@ -106,6 +187,14 @@ function receberFofocas()
 
 }
 
+//CARREGAR A FUNçÂO DE RECEBER FOFOCAS DO LOCALSTORAGE QUANDO CARREGA A PAGINA
 window.addEventListener("load",function(){
     receberFofocas();
 })
+
+//RELOAD PAGE
+
+function recarregarWindow()
+{
+    window.location.reload();
+}
