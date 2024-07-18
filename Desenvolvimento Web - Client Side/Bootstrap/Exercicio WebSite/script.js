@@ -51,6 +51,7 @@ function navegacao(direccao)
 
 //TRANSIÇÕES DE BARRA LATERAL___________________________________________________________
 //CADA ARGUMENTO REPRESENTA A DIRECÇÃO A TOMAR
+//DIFERENTE Á ROTA DE NVAGEAÇAR, ESTA TEM UMA CLIQUE NO BOTAO DE CLOSE DA BARRA LATERAL
 
 function navegacaoLateral(direccaoLateral)
 {
@@ -187,14 +188,20 @@ function receberFofocas()
 
 }
 
-//CARREGAR A FUNçÂO DE RECEBER FOFOCAS DO LOCALSTORAGE QUANDO CARREGA A PAGINA
-window.addEventListener("load",function(){
-    receberFofocas();
-})
-
 //RELOAD PAGE
-
 function recarregarWindow()
 {
     window.location.reload();
+}
+
+//RETORNAR PARA PAGINA INDEX EM NOTICIAS
+function retornarIndexNoticias()
+{
+    window.location.href="./index.html";
+    window.scroll({
+        top: 1350,
+        left: 100,
+        behavior: "smooth",
+      });
+
 }
