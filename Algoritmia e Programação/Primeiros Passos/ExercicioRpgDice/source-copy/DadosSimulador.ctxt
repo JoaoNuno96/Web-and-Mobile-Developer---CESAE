@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DadosSimulador
+comment1.params=
+comment1.target=DadosSimulador()
+comment2.params=
+comment2.target=void\ lancamentoDado()
+comment3.params=
+comment3.target=void\ recuperarDados()
+comment4.params=
+comment4.target=void\ messagem()
+numComments=5
