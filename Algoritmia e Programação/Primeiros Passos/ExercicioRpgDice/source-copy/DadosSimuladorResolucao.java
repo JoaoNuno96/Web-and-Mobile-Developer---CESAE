@@ -4,11 +4,12 @@ import java.util.Scanner;
 //Objecto para fazer dados randomizados;
 import java.util.Random;
 
-public class DadosSimulador
+public class DadosSimuladorResolucao
 {
     public int nrLadosDados;
+    public boolean run = true;
     
-    public DadosSimulador()
+    public DadosSimuladorResolucao()
     {
         this.recuperarDados();
         this.lancamentoDado();
@@ -25,36 +26,27 @@ public class DadosSimulador
         else
         {
             System.out.println("Não escolheu um gênero de dado suportado!");
-            this.again();
+            this.recuperarDados();
         }
         
     }
     
     public void recuperarDados()
-    {
-        this.message();
+    {   
+        if(run)
+        {
+            System.out.println("Bem-vindo ao Simulador de Lançamentos!");
+            System.out.println("Este programa permite lançar dados de varios lados.");
+            System.out.println("Por favor, escreva o numero de lados do quadrado");
+           run = false;
+        }
+        
         Scanner sc = new Scanner(System.in);
         
         int nrLadosRecebido = sc.nextInt();
         nrLadosDados = nrLadosRecebido;
-    }
-    
-    public void message()
-    {
-        System.out.println("Bem-vindo ao Simulador de Lançamentos!");
-        System.out.println("Este programa permite lançar dados de varios lados.");
-        System.out.println("Por favor, escreva o numero de lados do quadrado");
-    }
-    
-    public void again()
-    {
-        System.out.println("Tente Novamente...");
-        Scanner sc = new Scanner(System.in);
-        
-        int nrLadosRecebido = sc.nextInt();
-        nrLadosDados = nrLadosRecebido;
-        
         this.lancamentoDado();
     }
+
     
 }
