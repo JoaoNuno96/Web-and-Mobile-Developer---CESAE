@@ -6,26 +6,48 @@ import java.util.Random;
 
 public class DadosSimuladorResolucao
 {
-    public int nrLadosDados;
+    //Variavél Global
+    public int numeroLadosDados;
+    public Scanner scanNumeros = new Scanner(System.in);
+    public Scanner scanTexto = new Scanner(System.in);
+    public Random randomNumber = new Random();
+    
+    //Variavél Controlo
     public boolean run = true;
     
     public DadosSimuladorResolucao()
     {
         this.recuperarDados();
         this.lancamentoDado();
+        
     }
     
     public void lancamentoDado()
     {
-        if(nrLadosDados == 4 || nrLadosDados == 6 || nrLadosDados == 8)
+        if(numeroLadosDados == 4 || numeroLadosDados == 6 || numeroLadosDados == 8)
         {
-            Random r = new Random();
-            int finalDado = r.nextInt(nrLadosDados) + 1;
-            System.out.println("O dado de " + nrLadosDados + " saiu o numero " + finalDado);
+            int dadoFinal = randomNumber.nextInt(numeroLadosDados) + 1;
+            System.out.println("O dado de " + numeroLadosDados + " saiu o numero " + dadoFinal);
+            
+            //lançar outro dado
+            System.out.println("Deseja fazer outro lançamento? Digite 'sim' para lançar outro dado.");
+            
+            String choice = scanTexto.nextLine();
+            
+            if(choice.equalsIgnoreCase("sim"))
+            {
+                System.out.println("Digite outro dado");
+                this.recuperarDados();
+            }
+            else
+            {
+                this.quit();
+            }
+            
         }
         else
         {
-            System.out.println("Não escolheu um gênero de dado suportado!");
+            System.out.println("Não escolheu um gênero de dado suportado! Tente novamente...");
             this.recuperarDados();
         }
         
@@ -41,12 +63,14 @@ public class DadosSimuladorResolucao
            run = false;
         }
         
-        Scanner sc = new Scanner(System.in);
-        
-        int nrLadosRecebido = sc.nextInt();
-        nrLadosDados = nrLadosRecebido;
+        int numeroLadosRecebido = scanNumeros.nextInt();
+        numeroLadosDados = numeroLadosRecebido;
         this.lancamentoDado();
     }
-
     
+    public void quit()
+    {
+        System.out.println("Obrigado pela sua comparência. Volte Sempre!");
+        System.exit(1);
+    }
 }
