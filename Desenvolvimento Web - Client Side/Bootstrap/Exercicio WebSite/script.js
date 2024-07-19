@@ -114,6 +114,7 @@ function navegacaoLateral(direccaoLateral)
 
 }
 
+
 //LOCAL STORAGE___________________________________________________________
 
 //REGISTAR EM LOCALSTORAGE

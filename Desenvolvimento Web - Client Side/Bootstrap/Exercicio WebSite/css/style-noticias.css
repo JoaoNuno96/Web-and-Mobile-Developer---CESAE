@@ -1,4 +1,7 @@
 body{
-    background-image: url(../img/bg-noticias.jpg) !important
+    background-image: url(../img/bg-noticias-teste.jpg) !important;
     /* background: linear-gradient(rgb(0,0,0,0.500),rgb(0,0,0,0.500)), url("../img/bg.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
