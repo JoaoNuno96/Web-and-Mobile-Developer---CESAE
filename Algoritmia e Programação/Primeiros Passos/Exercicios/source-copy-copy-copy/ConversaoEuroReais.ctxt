@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ConversaoEuroReais
+comment1.params=
+comment1.target=ConversaoEuroReais()
+comment2.params=
+comment2.target=void\ receberDado()
+comment3.params=
+comment3.target=void\ conversao()
+numComments=4

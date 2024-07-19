@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=LancamentoDados
+comment1.params=
+comment1.target=LancamentoDados()
+comment2.params=
+comment2.target=int\ somarDadosAleatorios()
+comment3.params=
+comment3.target=void\ lancamentoDados()
+comment4.params=
+comment4.target=void\ receberDadosUtilizador()
+comment5.params=
+comment5.target=void\ jogar()
+numComments=6

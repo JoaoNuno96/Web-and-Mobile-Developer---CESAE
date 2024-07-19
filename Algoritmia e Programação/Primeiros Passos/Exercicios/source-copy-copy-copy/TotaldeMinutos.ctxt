@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=TotaldeMinutos
+comment1.params=
+comment1.target=TotaldeMinutos()
+comment2.params=
+comment2.target=void\ pedidoDeDados()
+comment3.params=dias
+comment3.target=void\ diasParaMinutos(int)
+numComments=4

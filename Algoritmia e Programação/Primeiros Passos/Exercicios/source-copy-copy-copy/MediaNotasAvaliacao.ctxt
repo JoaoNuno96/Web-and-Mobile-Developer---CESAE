@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MediaNotasAvaliacao
+comment1.params=
+comment1.target=MediaNotasAvaliacao()
+comment2.params=
+comment2.target=void\ receberDados()
+comment3.params=nota
+comment3.target=void\ verificarNotas(float)
+comment4.params=
+comment4.target=float\ media()
+numComments=5
