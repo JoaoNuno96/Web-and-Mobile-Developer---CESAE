@@ -1,4 +1,8 @@
 body{
     background-image: url(../img/bg.jpg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
     /* background: linear-gradient(rgb(0,0,0,0.500),rgb(0,0,0,0.500)), url("../img/bg.jpg"); */
+    margin: 0 auto;
+
 }

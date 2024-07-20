@@ -1,7 +1,3 @@
-
-//Clicar botao
-//disparar acçao -> auto scroll 100px
-
 //TRANSIÇÕES___________________________________________________________
 //CADA ARGUMENTO REPRESENTA A DIRECÇÃO A TOMAR
 
