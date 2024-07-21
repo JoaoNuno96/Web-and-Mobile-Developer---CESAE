@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Exercicio3
+comment1.params=primeiroV\ segundoV\ terceiroV\ quartoV
+comment1.target=Exercicio3(int,\ int,\ int,\ int)
+comment2.params=v1\ v2\ v3\ v4
+comment2.target=int\ diferencaValores(int,\ int,\ int,\ int)
+numComments=3
