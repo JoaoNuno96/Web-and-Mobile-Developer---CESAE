@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=IndiceMassaCorporal
-comment1.params=
-comment1.target=IndiceMassaCorporal()
-comment2.params=
-comment2.target=float\ calculoIMC()
-comment3.params=
-comment3.target=void\ receberDados()
-numComments=4
