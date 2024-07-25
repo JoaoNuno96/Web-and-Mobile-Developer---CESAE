@@ -41,7 +41,6 @@ public class ClasseC
     //funcao comparar os valores
     public void compararValores()
     {
-        
         if(numeroUtilizador != numeroRandom)
         {
             System.out.println("Ups fallhou!");
