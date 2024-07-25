@@ -4,8 +4,8 @@ public class UP
 {   
     //variaveis globais
     public Scanner sc = new Scanner(System.in);
-    public String adminUsername = "utilizador";
-    public String adminPass = "abz";
+    public String adminUsername = new String("utilizador");
+    public String adminPass = new String("abz");
     
     public String userUsername;
     public String userPass;
@@ -38,6 +38,8 @@ public class UP
     {
         if(count > 0)
         {
+            
+            //pode ser usado myStr1.equalsIgnoreCase(myStr2)
             if(userUsername == adminUsername && userPass == adminPass)
             {
                 System.out.println("Autenticação Completa");
