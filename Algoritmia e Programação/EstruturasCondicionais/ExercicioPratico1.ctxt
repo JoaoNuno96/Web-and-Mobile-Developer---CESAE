@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ExercicioPratico1
+comment1.params=
+comment1.target=ExercicioPratico1()
+comment2.params=
+comment2.target=int\ processNumber()
+comment3.params=number
+comment3.target=void\ processMessage(int)
+comment4.params=number
+comment4.target=void\ processMessageNew(int)
+numComments=5

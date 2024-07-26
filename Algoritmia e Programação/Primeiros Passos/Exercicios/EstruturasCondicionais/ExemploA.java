@@ -5,6 +5,6 @@ public class ExemploA
     
     public ExemploA()
     {
-        
+        if(userName.equals(""))
     }
 }
