@@ -1,0 +1,5 @@
+npm
+vite.js
+create vit@latest (nome projecto) -- --teamplate (nome framework: react)
+npm install
+npm run dev
