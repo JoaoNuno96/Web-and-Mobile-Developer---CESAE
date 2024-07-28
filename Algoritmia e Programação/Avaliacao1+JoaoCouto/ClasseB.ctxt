@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=ClasseB
-comment1.params=
-comment1.target=ClasseB()
-comment2.params=
-comment2.target=void\ receberDados()
-comment3.params=primeiroNumero\ segundoNumero
-comment3.target=int\ calcular(int,\ int)
-numComments=4
