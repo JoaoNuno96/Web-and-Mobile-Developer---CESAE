@@ -6,7 +6,6 @@ public class CiclosFor
     
     public CiclosFor()
     {
-        
         //PRIMEIRA PARTE - Declarar e iniciar variável
         //SEGUNDA PARTE - Condição
         //TERCEIRA PARTE - Controlo (incremento ou descremento)
@@ -16,7 +15,7 @@ public class CiclosFor
     
     public void numerosAleatorios()
     {
-        for(int j = 0; j<20;j++)
+        for(int j = 0; j<74;j++)
         {
             System.out.println(rand.nextInt(101));
         }
