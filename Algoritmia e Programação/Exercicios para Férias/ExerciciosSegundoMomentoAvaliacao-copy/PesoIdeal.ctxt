@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PesoIdeal
+comment1.params=
+comment1.target=PesoIdeal()
+comment2.params=
+comment2.target=float\ calculo()
+comment3.params=
+comment3.target=void\ guardarGenero()
+comment4.params=
+comment4.target=void\ guardarAltura()
+numComments=5

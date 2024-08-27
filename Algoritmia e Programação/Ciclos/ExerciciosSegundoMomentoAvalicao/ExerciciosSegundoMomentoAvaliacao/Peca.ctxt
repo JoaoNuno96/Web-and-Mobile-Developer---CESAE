@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Peca
-comment1.params=
-comment1.target=Peca()
-comment2.params=c\ q\ v
-comment2.target=Peca(int,\ int,\ float)
-comment3.params=
-comment3.target=float\ calculoValorPeca()
-numComments=4
