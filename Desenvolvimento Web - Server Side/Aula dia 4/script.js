@@ -166,21 +166,25 @@ for(let i in people)
 //____________________________________________________________
 // Lista de Compras
 
-let codigo = "fim";
+// let codigo = "fim";
 
-let listaCompras = [];
+// let listaCompras = [];
 
-while(codigo == "fim")
-{
-    let add = prompt("Digite o Item a adicionar no carrinho:");
-    listaCompras.push(add);
+// while(codigo == "fim")
+// {
+//     let add = prompt("Digite o Item a adicionar no carrinho:");
 
-    if(add == "fim")
-    {
-        codigo = "desligar";
-    }
-}
-listaCompras.pop();
-console.log(listaCompras);
+//     if(add == "fim")
+//     {
+//         codigo = "desligar";
+//     }
+//     else
+//     {
+//         listaCompras.push(add);
+//     }
+// }
+// listaCompras.pop();
+// console.log(listaCompras);
+
 
 //PAGINA 61 ficamos
