@@ -1,4 +1,7 @@
-package src;
+package src.entities;
+import src.enums.Category;
+import src.services.IAccountMethods;
+
 
 public class Product implements IAccountMethods
 {
