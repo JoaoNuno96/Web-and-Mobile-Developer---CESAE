@@ -1,5 +1,4 @@
-package Praticando;
-import Praticando.*
+package src;
 
 
 //Functions : Type and : Unit (void)
@@ -10,8 +9,8 @@ class Product(var nome : String, var preco : Float)
 
 fun main()
 {
-    //var animal = Animal("papagaio","20cm","10kgs");
-    this.cicles();
+    var a = Animal("papagia","dca","awd");
+    //this.cicles();
 }
 
 

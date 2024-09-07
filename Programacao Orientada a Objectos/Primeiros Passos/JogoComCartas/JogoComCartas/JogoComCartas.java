@@ -17,8 +17,10 @@ public class JogoComCartas
     
     public void CriarNovoBaralho()
     {
+        //Ciclo que vai circular os Naipes (Ouros, Paus, Espadas, Copas);
         for(int i = 0; i < card.arrayNaipes.length; i++)
         {
+            //Ciclo que vai circulas o rank das cartas (Ás, duque,...)
             for(int j = 0; j < card.arrayRanks.length; j++)
             {
                 listaBaralho.add(new Carta(i,j));

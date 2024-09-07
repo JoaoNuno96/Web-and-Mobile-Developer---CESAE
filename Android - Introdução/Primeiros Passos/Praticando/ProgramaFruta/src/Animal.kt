@@ -1,10 +1,10 @@
-package Praticando;
+package src;
 
-class Animal(var name : String, var size : String, var weight : String)
+class Animal(var n : String, var s : String, var w : String)
 {
-    public var name;
-    public var size;
-    public var weight;
+    public var name = n;
+    public var size = s;
+    public var weight = w;
 
     public fun details() : String
     {
