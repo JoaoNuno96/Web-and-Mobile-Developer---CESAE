@@ -9,8 +9,8 @@ class Product(var nome : String, var preco : Float)
 
 fun main()
 {
-    var a = Animal("papagia","dca","awd");
-    //this.cicles();
+    //var a = Animal("papagia","dca","awd");
+    this.cicles();
 }
 
 
@@ -27,11 +27,10 @@ fun varible()
 
 fun cicles()
 {
-    val index = 1;
-
-    for(index in 1..30)
+   var index = 10;
+    for(index in 10..100)
     {
-        println("___${index}___");
+        println(index);
     }
 }
 

@@ -1,19 +1,12 @@
 package src;
 
-class Animal(var name : String, var size : String, var weight : String)
+class Animal(var n, var t, var p)
 {
-    public var name;
-    public var size;
-    public var weight;
 
-    public fun details() : String
+    public Animal()
     {
-        return "Name: ${name}; Size: ${size}; Weight: ${weight}; ";
+        public var nome = n;
+        public var tamanho = t;
+        public var pembro = p;
     }
-
-    public fun run() : Unit
-    {
-        println("Correndooooo!");
-    }
-
 }
