@@ -9,10 +9,13 @@ public class JogoComCartas
     
     public ArrayList<Carta> listaBaralho = new ArrayList<Carta>();
     
-    public JogoComCartas()
+    public JogoComCartas(){ }
+    
+    public void TirarUmaCarta()
     {
-        //this.TirarUmaCarta();
-        //this.CriarNovoBaralho();
+        card = new Carta(rand.nextInt(3),rand.nextInt(13));
+        
+        System.out.println("Saiu o " + card.rank + " " +  card.naipe);
     }
     
     public void CriarNovoBaralho()
@@ -26,13 +29,6 @@ public class JogoComCartas
                 listaBaralho.add(new Carta(i,j));
             }
         }
-    }
-    
-    public void TirarUmaCarta()
-    {
-        card = new Carta(rand.nextInt(3),rand.nextInt(13));
-        
-        System.out.println("Saiu o " + card.rank + " " +  card.naipe);
     }
     
     //quando o baralho nao tiver mais cartar aparecer mensagem utilizador. "Acabou o baralho"
