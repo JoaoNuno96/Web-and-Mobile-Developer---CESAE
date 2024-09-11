@@ -8,8 +8,8 @@ public class Carta
     
     public Carta()
     {
-        naipe = "Ouro";
-        rank = "7";
+        this.naipe = "Ouro";
+        this.rank = "7";
     }
     
     public Carta(String n, String r)
