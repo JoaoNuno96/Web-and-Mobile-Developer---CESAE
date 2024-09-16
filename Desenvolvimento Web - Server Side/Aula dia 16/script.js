@@ -193,3 +193,56 @@ people.forEach(function(key,value,array){
 
 
 //PAGINA 61 ficamos
+
+
+//exercício fullnames
+const fullNames = [
+    {first: 'Albus', last: 'Dumbledore'},
+    {first: 'Harry', last: 'Potter'},
+    {first: 'Hermione', last: 'Granger'},
+    {first: 'Ron', last: 'Weasley'},
+    {first: 'Rubeus', last: 'Hagrid'},
+    {first: 'Minerva', last: 'McGonagall'},
+    {first: 'Severus', last: 'Snape'}
+];
+
+const novoArray = fullNames.filter(function(d)
+{
+    return d.first;
+})
+
+// const novoArray2 = fullNames.map(function(d)
+// {
+//     return d.first;
+// })
+
+for(var i in novoArray)
+{
+    console.log(novoArray[i]);
+}
+
+const greet = (x) => 
+{
+    console.log("Hey, " + x);
+}
+
+//FILTER
+const filtro = (x) => 
+{
+    return [x.filter(v => v.length < 10)];
+}
+
+//EVERY
+const allEvens = (arr) =>
+{
+    return arr.every(d => d % 2 === 0);
+}
+
+//REDUCE
+const media = (array) =>
+{
+    return array.reduce((accumulator,currentValue)=> {
+         accumulator + currentValue;
+    }) / array.length;
+}
+
