@@ -9,14 +9,14 @@ public class SalaDeJogoPoker
     public ArrayList<Jogador> listaJogador = new ArrayList<Jogador>();
     public ArrayList<Carta> baralho;
     public int id = 0;
-    
-    public ArrayList<Carta> cartasFloop = new ArrayList<Carta>();
+    public boolean flagFlop = true;
     
     public SalaDeJogoPoker()
     {
         
     }
     
+    //Adicionar Jogador
     public void adicionarJogador()
     {
         id++;
@@ -28,11 +28,7 @@ public class SalaDeJogoPoker
         System.out.println("Entrou na sala o " + jogador.nomeNoJogador);
     }
     
-    public void contarJogadores()
-    {
-        System.out.println("Existem " + listaJogador.size() + " jogadores");
-    }
-    
+    //Adicionar varios Jogadores
     public void adicionarJogadores(int nrJogadores)
     {
         for(int i = 0; i < nrJogadores; i++)
@@ -51,17 +47,26 @@ public class SalaDeJogoPoker
             }
         }
     }
+        
+    //Contar os Jogadores
+    public void contarJogadores()
+    {
+        System.out.println("Existem " + listaJogador.size() + " jogadores");
+    }
     
+    //Remover Jogadores (parametro Jogador)
     public void removerJogador(Jogador j)
     {
         listaJogador.remove(j);
     } 
 
+    //Remover Jogadores (parametro indice do Jogador)
     public void removerJogador(int index)
     {
         listaJogador.remove(index-1);
     }
     
+    //Apresentar Lista Jogadores
     public void apresentarListaJogadores()
     {
         for(int i = 0; i< listaJogador.size(); i++)
@@ -74,21 +79,25 @@ public class SalaDeJogoPoker
         }
     }
     
+    //Selecionar o Jogador(parametro indice)
     public Jogador selecionarDetalhesJogador(int index)
     {
         return listaJogador.get(index);
     }
     
+    //Comparar Jogadores com mais cartas (indice Jogador1, indice Jogador2)
     public String compararCartasJogadores(int player1, int player2)
     {
         return (selecionarDetalhesJogador(player1).maoJogador.size() < selecionarDetalhesJogador(player2).maoJogador.size() ) ? "Jogador 1 tem mais cartas!" : "Jogador 2 tem mais cartas!!";
     }
     
+    //Comparar Jogadores com mais cartas (Jogador1,Jogador2)
     public String compararCartasJogadores(Jogador player1, Jogador player2)
     {
         return ( player1.maoJogador.size() < player1.maoJogador.size() ) ? "Jogador 1 tem mais cartas!" : "Jogador 2 tem mais cartas!!";
     }
     
+    //Criar um baralho
     public void criarBaralho()
     {
         baralho = new ArrayList<Carta>();
@@ -104,19 +113,40 @@ public class SalaDeJogoPoker
         System.out.println("Um novo baralho foi criado!");
     }
     
-    //Tire 3 cartas do baralho e apresente
+    //Tirar uma carta do baralho
+    private Carta tirarUmaCarta()
+    {
+        Carta cardRandom = baralho.get(rand.nextInt(baralho.size()));
+        baralho.remove(cardRandom);
+        return cardRandom;
+    }
+    
+    //Tire 3 cartas do baralho e apresente (só pode ser usado uma vez)
     public void funcaoFlop()
     {
-        for(int i = 0; i<3;i++)
+        if(flagFlop)
         {
-            if(baralho.size() <= 0)
+            for(int i = 0; i<3;i++)
             {
-                System.out.println("Baralho sem cartas!");
-                break;
+                System.out.println(tirarUmaCarta().naipe + " " + tirarUmaCarta().rank);
             }
-            cartasFloop.add( baralho.get(rand.nextInt(baralho.size())) );
-            System.out.println( baralho.get(rand.nextInt(baralho.size())).naipe + " " + baralho.get(rand.nextInt(baralho.size())).rank);
+            flagFlop = false;
         }
+        else
+        {
+            System.out.println("Flop já usado");
+        }
+        
+    }
+    
+    //jogadores compram uma carta
+    public void todosOsJogadoresCompramUmaCarta()
+    {
+        for(int i = 0; i<listaJogador.size();i++)
+        {
+            listaJogador.get(i).comprarCarta(tirarUmaCarta());
+        }
+        System.out.println("Cada Jogador comprou uma carta!");
     }
     
 }

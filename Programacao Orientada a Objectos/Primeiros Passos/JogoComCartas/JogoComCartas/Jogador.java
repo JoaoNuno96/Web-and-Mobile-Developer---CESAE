@@ -11,22 +11,17 @@ public class Jogador extends Utilizador
     public Carta instanciaCarta;
     public JogoComCartas jc;
     
-    public static ArrayList<Carta> maoJogador = new ArrayList<Carta>();
-    
+    public static ArrayList<Carta> maoJogador;
     public Jogador()
     {
+        maoJogador = new ArrayList<Carta>();
         JogoComCartas jc = new JogoComCartas();
         jc.CriarNovoBaralho();
     }
     
-    public void comprarCarta(int nr)
+    public void comprarCarta(Carta cartaParam)
     {
-        for(int i = 0; i<nr;i++)
-        {
-            rand = new Random();
-            maoJogador.add(jc.listaBaralho.get(nr));
-            jc.listaBaralho.remove(nr);
-        }
+        maoJogador.add(cartaParam);
     }
     
     public void descartarCartas(int nr)
