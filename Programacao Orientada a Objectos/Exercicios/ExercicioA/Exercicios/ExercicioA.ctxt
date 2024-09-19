@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ExercicioA
+comment1.params=
+comment1.target=ExercicioA()
+comment2.params=
+comment2.target=void\ gerarNumeroRandomizado()
+comment3.params=
+comment3.target=void\ gerarEstrelaRandomizado()
+comment4.params=
+comment4.target=void\ gerarChave()
+comment5.params=numero
+comment5.target=boolean\ verificaNumeros(int)
+comment6.params=estrela
+comment6.target=boolean\ verificarEstrela(int)
+comment7.params=
+comment7.target=void\ listarCartao()
+numComments=8

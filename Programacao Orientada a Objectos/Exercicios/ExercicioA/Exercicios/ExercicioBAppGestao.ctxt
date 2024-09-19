@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=ExercicioBAppGestao
+comment1.params=
+comment1.target=ExercicioBAppGestao()
+comment2.params=n\ p
+comment2.target=void\ inserirProduto(java.lang.String,\ float)
+comment3.params=
+comment3.target=void\ listarProdutos()
+comment4.params=
+comment4.target=void\ totalPrecos()
+numComments=5
