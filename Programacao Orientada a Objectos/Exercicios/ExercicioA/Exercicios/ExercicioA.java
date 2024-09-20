@@ -44,10 +44,6 @@ public class ExercicioA
         }
     }
     
-    public void gerarChave()
-    {
-    }
-    
     public boolean verificaNumeros(int numero)
     {
         for(int i = 0; i < listaNumeros.size();i++)

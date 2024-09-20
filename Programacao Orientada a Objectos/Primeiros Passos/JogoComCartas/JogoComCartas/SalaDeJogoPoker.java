@@ -149,4 +149,24 @@ public class SalaDeJogoPoker
         System.out.println("Cada Jogador comprou uma carta!");
     }
     
+    //apresentar mãos dos jogadores
+    public void apresentarMaosJogadores()
+    {
+        for(Jogador j : listaJogador)
+        {
+            System.out.println("Jogador: " + j.nomeNoJogador);
+            j.mostrarMao();
+        }
+    }
+    
+    //todos os jogadores descartam uma carta da sua mão
+    public void todosOsJogadoresDescartamUmaCarta()
+    {
+        for(int i = 0; i<listaJogador.size();i++)
+        {
+            Carta c = listaJogador.get(i).maoJogador.get( rand.nextInt( listaJogador.get(i).maoJogador.size() ) );
+            listaJogador.get(i).descartaCarta(c);
+        }
+    }
+    
 }
