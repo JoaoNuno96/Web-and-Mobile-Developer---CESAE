@@ -72,7 +72,7 @@ public class ExercicioA
     {
         System.out.println("Chave de Euromilhões: ");
         
-        System.out.print("Números:"); 
+        System.out.print("Números:");
         for(int i : listaNumeros)
         {
             System.out.print(i + " ") ;

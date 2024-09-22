@@ -66,7 +66,7 @@ public class Jogador extends Utilizador
         }
         else
         {
-            for(int i = 0; i < maoJogador.size();i++)
+           for(int i = 0; i < maoJogador.size();i++)
            {
                System.out.println(maoJogador.get(i).naipe + " " + maoJogador.get(i).rank);
            } 

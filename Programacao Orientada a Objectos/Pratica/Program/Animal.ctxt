@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Animal
+comment1.params=n\ s\ w
+comment1.target=Animal(java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=2
