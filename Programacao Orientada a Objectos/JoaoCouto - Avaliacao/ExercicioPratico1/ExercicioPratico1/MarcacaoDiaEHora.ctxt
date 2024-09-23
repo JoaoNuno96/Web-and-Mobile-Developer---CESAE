@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MarcacaoDiaEHora
+comment1.params=
+comment1.target=MarcacaoDiaEHora()
+comment2.params=
+comment2.target=void\ apresentaDataAleat\u00F3ria()
+comment3.params=
+comment3.target=java.lang.String\ apresentarHoraAleatoria()
+comment4.params=respostaUser
+comment4.target=java.lang.String\ apresentarDiaAleatorio(java.lang.String)
+numComments=5

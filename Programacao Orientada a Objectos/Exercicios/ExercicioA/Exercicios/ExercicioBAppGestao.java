@@ -23,6 +23,7 @@ public class ExercicioBAppGestao
         }
         else
         {
+            //foreach
             for(ExercicioBProduto p : listaProdutos)
             {
                 System.out.println("Nome: " + p.nome + ", Preco: " + p.preco);
@@ -40,10 +41,10 @@ public class ExercicioBAppGestao
         else
         {
             float totalizador = 0;
-        
+            
             for(int i = 0; i<listaProdutos.size();i++)
             {
-                totalizador+=listaProdutos.get(i).preco;
+                totalizador += listaProdutos.get(i).preco;
             }
             
             System.out.println("O preço final é " + totalizador);

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PagamentoETroco
+comment1.params=
+comment1.target=PagamentoETroco()
+comment2.params=
+comment2.target=void\ gerarPrecoPerfume()
+comment3.params=
+comment3.target=void\ receberDinheiroUser()
+comment4.params=
+comment4.target=void\ verificarPagamento()
+comment5.params=valor
+comment5.target=void\ dinheiroEmFalta(int)
+numComments=6
