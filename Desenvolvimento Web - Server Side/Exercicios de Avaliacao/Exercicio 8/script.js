@@ -6,7 +6,7 @@ let corBotoes = ["#8e44ad ","#45b39d ","#f5b041","#839192","#922b21","#fcf3cf","
 
 function changeColor(botao)
 {
-    var valorRandom = Math.floor(Math.random() * (corBotoes.length - 1));
+    var valorRandom = Math.floor(Math.random() * (corBotoes.length));
 
     botao.style.backgroundColor = corBotoes[valorRandom];
 }
