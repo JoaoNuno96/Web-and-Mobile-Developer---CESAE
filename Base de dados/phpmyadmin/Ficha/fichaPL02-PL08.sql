@@ -197,3 +197,42 @@ SUM(v.qtd * p.preco)
 FROM venda as v
 INNER JOIN produto as p ON v.prod = p.idP
 GROUP BY v.dataId;
+
+
+PRATICA LABORAL 05________________________________________________
+
+1. Feito
+
+2. CREATE TABLE Cliente(
+    codCliente int AUTO_INCREMENT,
+    nome varchar(20) not null,
+    morada varchar(30),
+    telef int,
+    CONSTRAINT PRIMARY KEY PK_IdCliente(codCliente)
+);
+
+CREATE TABLE Encomenda(
+    codigoEncomenda int AUTO_INCREMENT,
+    data datetime not null,
+    codigoCliente int,
+    CONSTRAINT PRIMARY KEY PK_IdEncomenda(codigoEncomenda),
+    CONSTRAINT FOREIGN KEY FK_codigoCliente(codigoCliente) REFERENCES Cliente(codCliente)
+);
+
+CREATE TABLE LinhaEncomenda(
+    codEncomenda int,
+    codProduto int,
+    quantidade int not null,
+    desconto decimal(5,2) not null,
+    CONSTRAINT PRIMARY KEY PK_IdLinhaEncomenda(codEncomenda,codProduto),
+    CONSTRAINT FOREIGN KEY FK_IdEncomenda(codEncomenda) REFERENCES Encomenda(codigoEncomenda),
+    CONSTRAINT FOREIGN KEY FK_IdProduto(codProduto) REFERENCES Produto(codProduto)
+);
+
+CREATE TABLE Produto(
+    codProduto int AUTO_INCREMENT,
+    descricao varchar(30) not null,
+    preco decimal(5,2),
+    obs text,
+    CONSTRAINT PRIMARY KEY PK_IdProduto(codProduto)
+);
