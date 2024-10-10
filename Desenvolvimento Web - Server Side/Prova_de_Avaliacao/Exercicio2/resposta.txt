@@ -1,0 +1,4 @@
+2. Esta resposta pode ser de dois lado:
+    -Podemos criar os elementos HTML e meter uma classe com o "display-none", e usar Javascript para quando alguém efetuar login, envia algum estado para uma estrutura condicional que irá remover essa classe.
+    -ou...
+    -Podemos usar o Javascript para quando algum utilizador ficar autenticado, altera o valor de uma variavél boolean. Essa variável boolean está como condição de uma estrutura condicional e ao entrar nela faz a criação de um elemento html e o seu devido append() no elemento pai.

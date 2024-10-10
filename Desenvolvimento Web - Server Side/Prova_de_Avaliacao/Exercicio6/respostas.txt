@@ -1,0 +1,32 @@
+6
+
+6.1 ->
+
+document.getElementById("archievements").innerHTML = "Os meus ensinamentos para a vida";
+
+6.2 ->
+
+var listaItems = document.querySelectorAll("li");
+
+for(var i in listaItems)
+{
+    listaItems[i].innerHTML += " com sucesso!";
+}
+
+6.3 ->
+
+document.querySelector("button").addEventListener("click",function(e){
+    e.preventDefault();
+
+    //recupera o texto do input
+    var valorRecuperado = document.querySelector("#myItem");
+
+    //cria elementoNovo e escreve o seu devido texto
+    var elementoNovo = document.createElement("li");
+    elementoNovo.innerHTML = valorRecuperado.value;
+
+    //append no elemento pai da lista
+    document.getElementById("myList").append(elementoNovo);
+
+
+})

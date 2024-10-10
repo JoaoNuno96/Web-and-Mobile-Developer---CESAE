@@ -1,0 +1,16 @@
+5
+
+5.1 ->
+
+studentGrades.forEach(function(user){
+    console.log(`A nota de ${user.studentName} é ${user.grade}`);
+})
+
+
+5.2 ->
+
+O valor de cada studentGrades["n"] quando apresentado na consola irá ser em formato objecto (sendo que o array é de objectos). Mas neste caso, como estamos a iterar o indice 5, e considerando que o indice começa a 0, o valor será undefined porque o array só tem 4 indices (0,1,2,3,4).
+
+5.3 ->
+
+Sim, a função nameAndGrade() do objecto studentGrades[0] irá retornar "A Rita tem nota 16".

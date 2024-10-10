@@ -1,0 +1,25 @@
+4
+
+4.1 -> passwords.push("palavraPasseMuitoFixe");
+
+4.2 ->
+
+for(var i in passwords)
+{
+    if(userPassword == passwords[i])
+    {
+        alert("Acertou numa palavra passe do array!");
+    }
+}
+
+4.3 ->
+
+var safePasses = []:
+
+for(var i in passwords)
+{
+    if(passwords[i].length > 6)
+    {
+        safePasses.push(passwords[i]);
+    }
+}

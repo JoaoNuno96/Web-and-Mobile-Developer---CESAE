@@ -1,0 +1,1 @@
+1. No contexto web, programação Javascript pode servir para varias coisas: manipular/criar elementos de tela (DOM), manipular eventos de utilizador (eventos), manipular elementos de browser (BOM), fazer e receber API (com promises).
