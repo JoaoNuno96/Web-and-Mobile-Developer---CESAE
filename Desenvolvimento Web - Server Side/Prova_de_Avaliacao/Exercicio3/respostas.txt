@@ -1,0 +1,10 @@
+3
+
+3.1 -> False;
+3.2 -> False;
+3.3 -> False;
+3.4 -> True;
+3.5 -> 15;
+3.6 -> True;
+3.7 -> Tem que existir uma iteração com: num1 = 1;
+3.8 -> Variável Boolean
