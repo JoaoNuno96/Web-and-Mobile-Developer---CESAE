@@ -1,0 +1,27 @@
+//ANGULAR
+npm i -g @angular/cli
+
+//PERMISSAO DE CRIACAO DE ANGULAR
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+//CRIAR PROJECTO
+ng new PROJECTONOME
+
+//ANGULAR VERSION
+ng v
+
+//ABRIR SERVER
+ng serve -o
+
+//ABRIR NOUTROS DISPOSITIVSO MOVEIS
+ng serve --host 0.0.0.0 
+
+//NOVO COMPONENTE
+ng generate component NOMECOMPONENTE[ou caminho]
+ng g c NOMECOMPONENTE[ou caminho]
+
+//NOVO COMPONENTE NOUTRA PASTA
+ng g c pasta\outra-pasta\meu-componente
+
+
+DATA BIDING -> PARTILHAR DADOS COM O HTML DOS COMPOMENTES
