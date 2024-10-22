@@ -30,9 +30,16 @@
         <tbody>
             @foreach ($listaUtilizadores as $user)
                 <tr>
-                    <td scope="row">{{$user["0"]}}</td>
-                    <td scope="row">{{$user["1"]}}</td>
-                    <td scope="row">{{$user["2"]}}</td>
+                    <td scope="row">{{$user->name}}
+
+                    </td>
+
+                    <td scope="row">{{$user->email}}
+
+                    </td>
+                    <td scope="row">{{$user->senha}}
+
+                    </td>
                   </tr>
 
 

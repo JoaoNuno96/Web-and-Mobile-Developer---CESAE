@@ -1,8 +1,8 @@
-@extends('_layout');
+@extends('_layout')
 
 @section('content')
 
-<div class="container text-center">
+<div class="container text-center ">
     <div class="row">
         <div className="col">
             <div className="jumbotron">
