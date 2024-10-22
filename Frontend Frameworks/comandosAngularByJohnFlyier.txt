@@ -16,12 +16,44 @@ ng serve -o
 //ABRIR NOUTROS DISPOSITIVSO MOVEIS
 ng serve --host 0.0.0.0 
 
-//NOVO COMPONENTE
+//CRIAR COMPONENTE__________________________
 ng generate component NOMECOMPONENTE[ou caminho]
 ng g c NOMECOMPONENTE[ou caminho]
 
-//NOVO COMPONENTE NOUTRA PASTA
+//NOUTRA PASTA
 ng g c pasta\outra-pasta\meu-componente
+
+//CRIAR NOVO DIRETORIO__________________________
+ng generate directive NOMEDIRETORIO
+ng g directive NOMEDIRETORIO
+
+//CRIAR NOVO PIPE__________________________
+ng generate pipe NEWPIPE
+ng g pipe NEWPIPE 
+
+//CRIAR NOVO SERVICE__________________________
+ng generate service NEWSERVICE
+ng g service NEWSERVICE 
+
+//CRIAR NOVA CLASS__________________________
+ng generate class MYCLASS
+ng g class MYCLASS 
+
+//CRIAR NOVA GUARD__________________________
+ng generate guard myguardNAme
+ng g guard MYCmyguardNAmeLASS 
+
+//CRIAR NOVA Interface__________________________
+ng generate interface myInterfaceName
+ng g interface myInterfaceName 
+
+//CRIAR NOVA Enum__________________________
+ng generate enum myEnumName
+ng g enum myEnumName 
+
+//CRIAR NOVA Model__________________________
+ng generate module myModuleName
+ng g module myModuleName 
 
 
 DATA BIDING -> PARTILHAR DADOS COM O HTML DOS COMPOMENTES
