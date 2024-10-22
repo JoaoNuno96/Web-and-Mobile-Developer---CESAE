@@ -1,0 +1,9 @@
+Joao/joao@teste.pt/123456
+Jose/jose@teste.pt/12345312
+Maria/maria@teste.pt/1233
+Ines/maria@teste.pt/1233
+Marco/maria@teste.pt/1233
+JoaoNuno/joaonuno@teste.pt/12345
+geff/gef@teste.pt/123456
+joaoNuno/joao@teste.pt/123456
+nuno/nuno@teste.pt/12457
