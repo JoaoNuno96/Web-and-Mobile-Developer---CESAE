@@ -29,20 +29,25 @@
         </thead>
         <tbody>
             @foreach ($listaUtilizadores as $user)
-                <tr>
-                    <td scope="row">{{$user->name}}
+                <tr id="{{$user->name}}">
 
+                    <td>
+                        {{$user->name}}
                     </td>
 
-                    <td scope="row">{{$user->email}}
-
+                    <td>
+                        {{$user->email}}
                     </td>
-                    <td scope="row">{{$user->senha}}
 
+                    <td>
+                        {{$user->senha}}
                     </td>
+
+                    <td>
+                        <a class="btn btn-outline-danger" href="{{ route('user.remove', [$user->email]) }}">Eliminar</a>
+                    </td>
+
                   </tr>
-
-
             @endforeach
         </tbody>
       </table>

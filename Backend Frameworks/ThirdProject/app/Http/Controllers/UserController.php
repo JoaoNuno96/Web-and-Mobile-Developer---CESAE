@@ -36,9 +36,19 @@ class UserController extends Controller
 
         //dd($listaUtilizadores);
 
-        $indices = ["nome","email","senha"];
+        $indices = ["nome","email","senha","X"];
 
         return view("user.user-view-all", compact("listaUtilizadores","indices"));
+    }
+
+    public function remove(Request $request)
+    {
+        $email = $request->input('email');
+
+        $verifiedE = $this->verifyId($email);
+        dd($email);
+
+        return view("user.user-remove");
     }
 
     private function receiveData()
@@ -46,6 +56,15 @@ class UserController extends Controller
         return DB::table("user")
             ->get();
     }
+
+    private function verifyId($email)
+    {
+        return DB::table("user")
+            ->where("email", $email)
+            ->get();
+    }
+
+
 
 
 
