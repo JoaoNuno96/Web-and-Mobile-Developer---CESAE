@@ -44,7 +44,7 @@
                     </td>
 
                     <td>
-                        <a class="btn btn-outline-danger" href="{{ route('user.remove', [$user->email]) }}">Eliminar</a>
+                        <a class="btn btn-outline-danger" href="{{ route('user.remove', $user->id) }}">Eliminar</a>
                     </td>
 
                   </tr>
