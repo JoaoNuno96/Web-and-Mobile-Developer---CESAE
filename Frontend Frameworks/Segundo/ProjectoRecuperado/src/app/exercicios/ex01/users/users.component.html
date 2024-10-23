@@ -1,0 +1,7 @@
+<h1>Dados de Utilizador:</h1>
+
+<p>Nome: {{userName}}</p>
+<p>Idade: {{userAge}} anos</p>
+
+<app-alterar-nome (alterarNome)="atualizarNome($event)" />
+<app-alterar-idade (mudarNumero)="atualizarIdade($event)" />
