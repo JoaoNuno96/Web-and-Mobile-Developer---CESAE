@@ -37,7 +37,8 @@ class HomeController extends Controller
         $uC = new UserController();
         $courseInfo = $uC->sendHome();
 
-        return view('utils.home', compact("greetings","userInfo","info","courseInfo"));
+        $array = $this->getAllUSersFromArray();
+        return view('utils.home', compact("greetings","userInfo","info","courseInfo","array"));
     }
 
     public function Welcome()
@@ -48,5 +49,16 @@ class HomeController extends Controller
     public function WelcomeUser($name)
     {
         return "<h1>Hello $name </h1>";
+    }
+
+    private function getAllUSersFromArray(){
+
+        return $users = [
+            ['id' => 1, 'name' => 'Sara', 'email' => 'Sara@gmail.com'],
+            ['id' => 2, 'name' => 'Dr Anablea', 'email' => 'Anabela@gmail.com'],
+            ['id' => 3, 'name' => 'Bruno', 'email' => 'Sara@Bruno.com'],
+            ['id' => 4, 'name' => 'Alex', 'email' => 'Alex@gmail.com'],
+        ];
+
     }
 }
