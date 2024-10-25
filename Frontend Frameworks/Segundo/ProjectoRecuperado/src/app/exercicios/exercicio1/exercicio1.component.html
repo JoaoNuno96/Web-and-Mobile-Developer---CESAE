@@ -1,0 +1,15 @@
+<h2>Exercicio 1.</h2>
+<p>Criar compomentes que manipulam um formulário com o nome de utilizador e idade</p>
+
+<br />
+
+<h5><strong>Dados de Utilizador:</strong></h5>
+<hr />
+<p>Nome: {{nome}} </p>
+<p>Idade: {{idade}} anos</p>
+<hr />
+
+
+<app-form-nome (mudarNome)="atualizarNome($event)"/>
+
+<app-form-idade [message]="mensagem" (mudarIdade)="atualizarIdade($event)"/>

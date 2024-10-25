@@ -1,6 +1,9 @@
 //ANGULAR
 npm i -g @angular/cli
 
+//GERAR ROTAS
+ng generate module-app-routing
+
 //PERMISSAO DE CRIACAO DE ANGULAR
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
