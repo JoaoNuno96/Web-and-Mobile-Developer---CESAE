@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg bg-primary bg-gradient text-center">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">ANGULAR</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-light" aria-current="page" routerLink="/home">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-light active" routerLink="/telemoveis">Items</a>
+        </li>
+
+        <div class="dropdown nav-item">
+          <button class="btn btn-primary bg-gradient dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Exercicios
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/exercicio1" >Exercicio 1</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown nav-item">
+          <button class="btn btn-primary bg-gradient dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Aulas
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/ngngif" >Aulas - NgIf </a></li>
+            <li><a class="dropdown-item" routerLink="/ngngfor" >Aulas - NgFor</a></li>
+
+          </ul>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</nav>

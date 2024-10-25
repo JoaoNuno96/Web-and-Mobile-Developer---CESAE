@@ -25,6 +25,7 @@ COMANDOS LARAVEL
 -> php artisan migrate:rollback (reverte a migração)
 -> php artisan make:migration add_user_type_to_users_table (migração para alteração da tabela Users)
 
+-> php artisan make:migration add_items_to_users_table (migração para adicionar da tabela Users)
 
 //Rotas com Controller
 Route::get('/home_contacts', [HomeController::class, 'index'])->name('index.contacts');
@@ -108,8 +109,11 @@ php artisan make:resource TaskResourceCollection --collection.
 php artisan make:migration add_photo_to_users_table --table=use
 
 
-
-
 //correcção de bug table cache
 php artisan cache:table
 php artisan migrate
+
+
+//ROTAS DE WEB PHP NAO APARECEM EM route:list
+php artisan route:cache 
+php artisan route:clear

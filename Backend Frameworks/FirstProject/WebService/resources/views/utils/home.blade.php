@@ -37,6 +37,19 @@
     <p>Nome: {{$courseInfo["address"]}}</p>
     <p>Nome: {{$courseInfo["email"]}}</p>
 
+    <h1 class="text-center bg-info text-light">LIST OF ARRAY</h1>
+    <ul class="bg-dark list-group">
+        @foreach ($array as $item)
+            <hr class="border-info"  />
+            <li class="text-light text-center">ID: {{$item["id"]}} </li>
+            <li class="text-light text-center">NAME: {{$item["name"]}}</li>
+            <li class="text-light text-center">EMAIL: {{$item["email"]}}</li>
+            <hr class="border-info"  />
+        @endforeach
+
+    </ul>
+
+
  @endsection
 
 

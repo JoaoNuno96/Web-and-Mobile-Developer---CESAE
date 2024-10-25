@@ -1,0 +1,64 @@
+<h3 class="text-center">NG FOR</h3>
+
+<!--FIRST-->
+<ul>
+  <li *ngFor="let item of listaCarro; index as i">
+    <hr />
+    <p>Nome: {{ item.nome }}</p>
+    <p>Marca: {{ item.marca }}</p>
+    <p>Cor: {{ item.cor }}</p>
+    <hr />
+  </li>
+</ul>
+
+
+<!--SECOND-->
+<hr/>
+<br />
+
+<ul>
+  <ng-template ngFor let-item [ngForOf]="listaCarro" :let-i="index" >
+    <li>{{item.nome}} {{i}}</li>
+  </ng-template>
+</ul>
+
+
+<!---THIRD-->
+<hr/>
+<br />
+
+<ul>
+  @for (item of listaCarro; track $index)
+  {
+    <li>{{item.nome}} / {{item.marca}} / {{item.cor}} </li>
+  }
+  @empty {
+    <li>A lista está vazia</li>
+  }
+
+</ul>
+
+
+<!---TABLE-->
+
+<table class="table table-primary text-center">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Marca</th>
+      <th>Cor</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (item of listaCarro; track $index)
+    {
+      <tr>
+        <td>{{item.nome}}</td>
+        <td>{{item.marca}}</td>
+        <td>{{item.cor}}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+

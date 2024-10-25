@@ -1,0 +1,88 @@
+<h3 class="container text-center">Estruturas Condicionais!</h3>
+<hr />
+
+<div>
+  <h3>NgIf</h3>
+
+  <!--MANEIRO MAIS VISTA-->
+  <div *ngIf="valor >= 0">
+    O valor é maior ou igual a 0.
+  </div>
+
+  <!--MANEIRa ANTIGA-->
+
+  <ng-template [ngIf]="valor >= 0">
+    <div>O valor é maior ou igual</div>
+  </ng-template>
+</div>
+  <!--MANEIRa RECENTE-->
+
+  @if(valor >= 0){
+    <div>O valor é maior que 0 (versão recente)</div>
+
+  }
+
+
+  <!--- ELSE BLOCO-->
+  <h3>ELSE</h3>
+
+  <div *ngIf="valor >= 0; else elseBloco">
+    O valor é maior ou igual a 0.
+  </div>
+  <ng-template #elseBloco>
+    <div>O valor é menor que 0 (primeiro)</div>
+  </ng-template>
+
+
+
+  <ng-template [ngIf]="valor >= 0" [ngIfElse]="elseBloco2">
+    <div>O valor é maior ou igual</div>
+  </ng-template>
+  <ng-template #elseBloco2>
+    <div>O valor é menor que 0 (segundo)</div>
+  </ng-template>
+
+
+  @if(valor >= 0)
+  {
+    <div>O valor é maior que 0 (versão recente)</div>
+  }
+  @else
+  {
+    <div>O valor é menor que 0 (terceiro)</div>
+  }
+
+  <!--- ELSE IF BLOCO-->
+  <h3>ELSE</h3>
+
+  <div *ngIf="valor >= 0; else elseBloco">
+    O valor é maior ou igual a 0.
+  </div>
+  <ng-template #elseBloco>
+      <div *ngIf="valor < 0; else elseBlocoSegundo">O valor é menor que 0 (primeiro)</div>
+  </ng-template>
+  <ng-template #elseBlocoSegundo>
+
+  </ng-template>
+
+
+
+  <!---THEN-->
+
+  <h3>THEN</h3>
+
+  <div *ngIf="valor >= 0; then elseBloco"> </div>
+
+  <ng-template #thenBlcok>
+      <div>CAso seja positivo</div>
+  </ng-template>
+
+    <!---SWITCH-->
+
+    <h3>SWITCH</h3>
+
+    <div [ngSwitch]="true">
+      <div *ngSwitchCase="valor > 0">O vlaor é maior que 0 </div>
+      <div *ngSwitchCase="valor === 0">O vlaor é igual a 0 </div>
+      <div *ngSwitchDefault>O valor é menos que 0</div>
+    </div>
