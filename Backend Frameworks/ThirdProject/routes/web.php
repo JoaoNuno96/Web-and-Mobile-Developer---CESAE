@@ -11,6 +11,5 @@ Route::get('/welcome', [WelcomeController::class,"info" ])->name("welcome");
 Route::get('/users',[UserController::class,"showList"])->name("user.showList");
 Route::get('/user/add',[UserController::class,"add"])->name("user.add");
 Route::post('/user/add/sucess',[UserController::class,"addNewUser"])->name("user.addNew"); //NOVO RETORNO
-// Route::get('/user/remove/',[UserController::class,"removeGet"])->name("user.remove");
-Route::delete('/user/remove/{id}',[UserController::class,"remove"])->name("user.remove");
+Route::delete("/users/{id}",[UserController::class, "removeUser"])->name("user.rem");
 Route::get('/contact', [ContactsController::class,"contact" ])->name("contact");

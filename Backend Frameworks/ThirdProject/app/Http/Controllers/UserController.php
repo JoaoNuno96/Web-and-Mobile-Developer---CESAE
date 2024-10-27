@@ -43,24 +43,13 @@ class UserController extends Controller
     }
 
     //REMOVER UM UTILIZADOR DE BASE DE DADOS
-    public function remove(Request $request)
+    public function removeUser($id)
     {
-        $id = $request->id;
-        // dd($id);
-
-        $this->verifyUser($id);
+        DB::table("user")
+        ->where("id", $id)
+        ->delete();
 
         return view("user.user-remove");
-    }
-
-    public function removeGet(Request $request)
-    {
-        dd($request);
-        $id = $request->server("QUERY_STRING");
-
-        $this->verifyUser($id);
-
-        return view("user.user-remove",compact("id"));
     }
 
     //RECEBER DADOS BASE DE DADOS
