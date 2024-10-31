@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { Exercicio1Component } from './exercicios/exercicio1/exercicio1.component';
 import { NgngifAulaComponent } from './aulas/ngngif-aula/ngngif-aula.component';
 import { NgngforComponent } from './aulas/ngngfor/ngngfor.component';
+import { AnimalComponent } from './animal/animal.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,11 @@ export const routes: Routes = [
     title: "Exercicio1",
     path: "exercicio1",
     component: Exercicio1Component
+  },
+  {
+    title: "Animal",
+    path: "animal",
+    component: AnimalComponent
   },
   {
     path: '',
