@@ -1,0 +1,6 @@
+1- Levantamento Requisitos;
+2 - Arquitetura.
+3 - Desenvolvimento;
+4 - Testes;
+5 - Documentação;
+6 - Entrega;

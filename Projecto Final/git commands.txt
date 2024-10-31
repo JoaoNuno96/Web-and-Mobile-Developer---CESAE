@@ -1,0 +1,47 @@
+//PUXAR DE UMA BRANCH PARA OUTRA
+
+git push origin branch1:branch2
+
+//ELIMINAR BRANCH
+git branch -d <branch>
+
+//BRANCH LIST
+git branch --list
+
+
+NOVA BRANCH
+git branch developer
+git chechkout developer
+git add .
+git commit -m ""
+git push -u origin developer
+
+NOS OUTROS ELEMENTOS
+git checkout
+git pull
+___ALTERACOES___
+git add .
+git commit -m ""
+git push -u origin developer
+
+NOS OUTROS ELEMENTOS
+git checkout
+git pull
+___ALTERACOES___
+git add .
+git commit -m ""
+git push -u origin developer
+
+//PARA ENVIAR DE UMA PARA OUTRA
+(joao)
+git add .
+git commit -m ""
+git push
+git push origin joao:developer (enviar joao para developer)
+
+//OUTRO PESSOAL
+git checkout developer
+git pull
+git cehckout gefferson
+git push origin gefferson:developer
+

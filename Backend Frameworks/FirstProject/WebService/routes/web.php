@@ -12,6 +12,8 @@ Route::get('/home/welcome/{name}', [HomeController::class,"WelcomeUser"])->name(
 Route::get('/allUsers', [UserController::class,"allUsers"])->name("users.all");
 Route::get('/addUsers', [UserController::class,"addUsers"])->name("users.add");
 
+Route::get('/isertUser', [UserController::class,"addUsers"])->name("users.add");
+
 //Rota Fallback!!!
 Route::fallback(function(){
     return view('fallback.erro');
