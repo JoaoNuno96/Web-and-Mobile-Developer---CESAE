@@ -45,6 +45,7 @@
 
                     <td>
                         <a class="btn btn-outline-danger" href="{{ route('user.rem', $user->id) }}">Eliminar</a>
+                        <a class="btn btn-outline-warning" href="{{ route('user.editSpecs', $user->id) }}">Editar</a>
                     </td>
 
                   </tr>
