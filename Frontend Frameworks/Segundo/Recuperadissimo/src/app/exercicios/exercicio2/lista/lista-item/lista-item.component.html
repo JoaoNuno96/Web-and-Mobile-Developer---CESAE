@@ -1,0 +1,37 @@
+<div class="col col-lg-4">
+  <div class="card mb-3" >
+    <div>
+      <div>
+        <img [src]="planta.imagem" class="img-fluid rounded-start" alt="flowers">
+      </div>
+      <div>
+        <div class="card-body">
+          <h5 class="card-title">{{planta.nome}}</h5>
+
+          @if(planta.interior)
+          {
+            <p class="card-text" [style.color]="textInterior">{{planta.interior ? "Tipo Planta: Planta é de interior" : "Tipo Planta: Planta é de exterior"}}</p>
+          }
+          @else
+          {
+            <p class="card-text">{{planta.interior ? "Tipo Planta: Planta é de interior" : "Tipo Planta: Planta é de exterior"}}</p>
+          }
+
+          @if(planta.daFlores)
+          {
+            <p class="card-text" [style.color]="textDaFlores">{{planta.daFlores ? "Dá Planta: Planta que dá flores" : "Dá Planta: Planta não dá flores"}}</p>
+          }
+          @else
+          {
+            <p class="card-text">{{planta.daFlores ? "Dá Planta: Planta que dá flores" : "Dá Planta: Planta não dá flores"}}</p>
+          }
+
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">Tamanho: {{planta.tamanhoMedio}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
