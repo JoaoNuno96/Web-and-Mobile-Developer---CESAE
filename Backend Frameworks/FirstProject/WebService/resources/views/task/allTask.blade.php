@@ -11,6 +11,7 @@
       </tr>
     </thead>
     <tbody>
+
         @foreach ($tasks as $task)
         <tr>
             <td>{{$task->id}}</td>

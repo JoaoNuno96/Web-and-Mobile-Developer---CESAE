@@ -25,6 +25,16 @@ class HomeController extends Controller
 
     public function Index()
     {
+        return view('utils.home');
+    }
+
+    public function Welcome()
+    {
+        return view('welcome');
+    }
+
+    public function anotations()
+    {
         $greetings = $this->getAllGrets();
 
         $userInfo = [
@@ -38,12 +48,7 @@ class HomeController extends Controller
         $courseInfo = $uC->sendHome();
 
         $array = $this->getAllUSersFromArray();
-        return view('utils.home', compact("greetings","userInfo","info","courseInfo","array"));
-    }
-
-    public function Welcome()
-    {
-        return view('welcome');
+        return view('utils.class_anotations', compact("greetings","userInfo","info","courseInfo","array"));
     }
 
     public function WelcomeUser($name)

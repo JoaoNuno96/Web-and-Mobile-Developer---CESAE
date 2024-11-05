@@ -1,7 +1,7 @@
 @extends('layout.femaster')
 @section('content')
 
-<p class="text-center">PRENDAS</p>
+<p class="text-center">LISTA PRENDAS</p>
 
 <table class="table">
     <thead>
@@ -11,6 +11,7 @@
         <th scope="col">Valor Previsto</th>
         <th scope="col">Valor Gasto</th>
         <th scope="col">Utilizador</th>
+        <th scope="col">Diferença</th>
       </tr>
     </thead>
     <tbody>
@@ -24,8 +25,9 @@
             <td>{{$gift->valuePreview}}</td>
             <td>{{$gift->valueSpend}}</td>
             <td>{{$gift->userName}}</td>
-            {{-- <td><a href="{{route('users.show', $user->id)}}" type="button" class="btn btn-success">Ver</a></td>
-            <td><a href="{{route('users.delete', $user->id)}}" type="button" class="btn btn-danger">Remover</a></td> --}}
+            <td>{{$gift->valueSpend < $gift->valuePreview ? "Tu poupaste " : "Tu não poupaste "}}</td>
+            <td><a href="{{route('gifts.show.gift', $gift->id)}}" type="button" class="btn btn-success">Ver</a></td>
+            <td><a href="{{route('gifts.remove', $gift->id)}}" type="button" class="btn btn-danger">Remover</a></td>
 
           </tr>
         @endforeach

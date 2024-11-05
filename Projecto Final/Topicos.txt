@@ -2,3 +2,22 @@ Atas de trabalho (semana).
 Organizar jira.
 Organizar GitHub.
 reunião cliente
+
+__________________________________PRIMEIRA FASE PESQUISA__________________________________
+
+PRIMEIRO ESBOÇOS
+MODELOS DE BASE DE DADOS
+website:
+https://justgo.com.pt/
+https://www.vagamundos.pt/
+
+
+________________________________SEGUNDA FASE ESBOÇO E DECISÕES______________________________
+
+ESBOÇOS NO FIGMA;
+
+DECISÔES:
+ ->IMAGENS;
+ ->TIPOGRAFIA;
+ ->CORES;
+ ->ANIMAÇÔES;

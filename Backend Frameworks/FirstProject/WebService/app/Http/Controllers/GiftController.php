@@ -10,18 +10,22 @@ class GiftController extends Controller
     public function showGifs()
     {
         $gifts = $this->receiveGifsFromDatabase();
+
         return view("gifts.gifts_show",compact("gifts"));
     }
 
     public function showGiftSingle($id)
     {
         $gift = $this->receiveOneGiftFromDatabase($id);
-        return view("gifts.gifts_show",compact("gifts"));
+
+        return view("gifts.gifts_single_show",compact("gift"));
     }
+
 
     public function removeGift($id)
     {
-
+        $this->removeSelectedItemFromDatabase($id);
+        return back();
     }
 
     private function receiveGifsFromDatabase()
@@ -35,8 +39,8 @@ class GiftController extends Controller
     private function receiveOneGiftFromDatabase($id)
     {
         return DB::table("gifts")
-        ->where("id",$id)
-        ->join("users","users.id","=","user_fk")
+        ->where("gifts.id", $id)
+        ->join("users","users.id","=","gifts.user_fk")
         ->select("gifts.*","users.name as userName")
         ->first();
     }
