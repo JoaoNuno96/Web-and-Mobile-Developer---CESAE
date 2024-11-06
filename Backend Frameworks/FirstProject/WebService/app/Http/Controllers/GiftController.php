@@ -28,6 +28,16 @@ class GiftController extends Controller
         return back();
     }
 
+    public function form()
+    {
+        return view("gifts.gifts_form");
+    }
+
+    public function add(Request $request)
+    {
+
+    }
+
     private function receiveGifsFromDatabase()
     {
         return DB::table("gifts")

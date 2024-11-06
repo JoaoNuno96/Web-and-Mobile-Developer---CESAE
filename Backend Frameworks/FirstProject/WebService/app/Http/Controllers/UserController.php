@@ -6,6 +6,7 @@ use App\Models\Task;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 
 class UserController extends Controller
@@ -16,28 +17,32 @@ class UserController extends Controller
         return view('users.all_user');
     }
 
-    public function addUsers()
-    {
-        return view('users.addUsers');
-    }
-
     public function sendHome()
     {
         return $this->getCesaeInfo();
     }
 
-    public function insertUser()
+    public function form()
     {
-        DB::table("users")
-            ->insert([
-                "name" => "joao",
-                "email" => "joao@teste.pt",
-                "nif" => "2455351453",
-                "address" => "Rua do nabo",
-                "password" => "12346"
-            ]);
+        return view("users.form");
+    }
 
-        return Response::Json("sucesso");
+    public function add(Request $request)
+    {
+        dd($request);
+        $request->validate([
+            "name" => "string|required|max:20",
+            "email" => "email|required|unique:users",
+            "senha" => "min:6|required"
+        ]);
+
+        User::insert([
+            "name" => $request->name,
+            "email" => $request->email,
+            "password" => Hash::make($request->senha)
+        ]);
+
+        return redirect()->route("users.all")->with("Message","Contactos adicionados com sucesso");
     }
 
     public function updateUser()
@@ -78,7 +83,6 @@ class UserController extends Controller
     {
         $cesaeInfo = $this->getCesaeInfo();
         $users = $this-> getAllUsersFromArray();
-        /*dd($users);*/
         return view('users.all_user', compact('cesaeInfo','users'));
     }
 

@@ -7,22 +7,28 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
 
 
+
 Route::get('/', [HomeController::class,"Index"])->name("home");
 Route::get('/welcome', [HomeController::class,"Welcome"])->name("welcome");
 Route::get('/home/welcome/{name}', [HomeController::class,"WelcomeUser"])->name("home/welcome/{name}");
 Route::get("/anotations",[HomeController::class,"anotations"])->name("class.anotations");
 
 Route::get('/allUsers', [UserController::class,"users"])->name("users.all");
-Route::get('/addUsers', [UserController::class,"addUsers"])->name("users.add");
-Route::get('/isertUser', [UserController::class,"addUsers"])->name("users.add");
+Route::get('/form/add', [UserController::class,"form"])->name("users.form");
+Route::post('/form/add/sucess', [UserController::class,"add"])->name("users.add");
 
 Route::get('/allTask', [TaskController::class,"getAllTask"])->name("task.all");
+Route::get("/task/form",[TaskController::class,"form"])->name("task.form");
+Route::post("/task/form/add",[TaskController::class,"add"])->name("task.add");
 
 Route::get("/user_show/{id}", [UserController::class, "viewUser"])->name("users.show");
 Route::get("/users_delete/{id}", [UserController::class, "removeUser"])->name("users.delete");
+
 Route::get("/gifts", [GiftController::class, "showGifs"])->name("gifts.show");
 Route::get("/gifts/show/{id}", [GiftController::class, "showGiftSingle"])->name("gifts.show.gift");
 Route::get("/gifts/remove/{id}", [GiftController::class, "removeGift"])->name("gifts.remove");
+Route::get("/gifts/form", [GiftController::class, "form"])->name("gifs.form");
+Route::post("/gifts/form/add", [GiftController::class, "add"])->name("gifs.form.add");
 
 //Rota Fallback!!!
 Route::fallback(function(){ return view('fallback.erro'); });
