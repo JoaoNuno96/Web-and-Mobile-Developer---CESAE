@@ -7,6 +7,8 @@ import { Exercicio2Component } from './exercicios/exercicio2/exercicio2.componen
 import { NgngifAulaComponent } from './aulas/ngngif-aula/ngngif-aula.component';
 import { NgngforComponent } from './aulas/ngngfor/ngngfor.component';
 import { AnimalComponent } from './animal/animal.component';
+import { CicloVidaComponent } from './aulas/ciclo-vida/ciclo-vida.component';
+import { OutroComponenteComponent } from './aulas/outro-componente/outro-componente.component';
 
 export const routes: Routes = [
   {
@@ -28,6 +30,11 @@ export const routes: Routes = [
     title: "Aula - NgFor",
     path: "ngngfor",
     component: NgngforComponent
+  },
+  {
+    title: "Aula - Ciclo Vida Do Compomente",
+    path: "ciclovida",
+    component: OutroComponenteComponent
   },
   {
     title: "Exercicio1",

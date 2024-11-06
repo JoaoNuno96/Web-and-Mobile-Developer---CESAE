@@ -94,5 +94,7 @@ export class ListaComponent {
     },
   ];
 
+  tamanhoPlantas : number = this.plantas.length;
+
 
 }

@@ -1,32 +1,14 @@
 <h2 class="text-center">Lista de Flores</h2>
 
-<div class="container-fluid">
+<div class="d-flex align-items-start flex-column">
+
 
   @for (planta of plantas; track $index)
-    {
-      <div class="row">
-        @if($index % 3 != 0)
-        {
-          <app-lista-item [dados-planta]="planta" />
-        }
-      </div>
-    }
-
-    <div class="row text-center">
-
-      <div class="col-4">
-        NOVA
-      </div>
-
-      <div class="col-4">
-        NOVA
-      </div>
-
-      <div class="col-4">
-        NOVA
-      </div>
-
+  {
+    <div class="p-2">
+      <app-lista-item [dados-planta]="planta" />
     </div>
+  }
 
 
 
