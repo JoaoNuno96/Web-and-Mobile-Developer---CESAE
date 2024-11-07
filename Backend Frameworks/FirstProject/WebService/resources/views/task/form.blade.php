@@ -1,14 +1,7 @@
 @extends('layout.femaster')
 @section('content')
 
-@if(session('task_message'))
 
-        <div class="alert alert-success" role="alert">
-            {{ session("task_message" )}}
-        </div>
-        {{-- @script message({{ session("Message" )}}); --}}
-
-@endif
 
 
   <form action="{{route("task.add")}}" method="POST">
@@ -27,7 +20,7 @@
     <br />
     <div class="form-group">
       <label for="exampleInputPassword1">Descricao</label>
-      <input name="descricao" type="text" class="form-control" id="exampleInputPassword1" placeholder="Adicionar Descriçõa">
+      <input name="descricao" type="text" class="form-control" id="exampleInputPassword1" placeholder="Adicionar Descrição">
     </div>
 
     @error("descricao")
@@ -47,7 +40,7 @@
 
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Registar</button>
   </form>
 
   @endsection

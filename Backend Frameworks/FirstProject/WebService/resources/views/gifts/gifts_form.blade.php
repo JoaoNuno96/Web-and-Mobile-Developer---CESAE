@@ -1,7 +1,6 @@
 @extends('layout.femaster')
 @section('content')
 
-
 <form action="{{route("gifs.form.add")}}" method="POST">
     @csrf
 
@@ -12,17 +11,24 @@
 
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Valor Previsto</label>
-        <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Valor Prevista" aria-describedby="emailHelp">
+        <input type="text" name="valorPrevisto" class="form-control" id="exampleInputEmail1" placeholder="Valor Prevista" aria-describedby="emailHelp">
       </div>
 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Valor Gasto</label>
-        <input type="password" name="senha" class="form-control" id="exampleInputEmail1" placeholder="Valor Gasto" aria-describedby="emailHelp">
+        <input type="text" name="valorGasto" class="form-control" id="exampleInputEmail1" placeholder="Valor Gasto" aria-describedby="emailHelp">
       </div>
 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Utilizador</label>
-        <input type="password" name="senha" class="form-control" id="exampleInputEmail1" placeholder="Utilizador" aria-describedby="emailHelp">
+        <select name="user" id="utilizadores" class="form-select" aria-label="Default select example">
+            @foreach ( $users as $user )
+
+                <option value="{{$user->id}}">{{$user->name}}</option>
+
+            @endforeach
+        </select>
+
       </div>
 
     <button type="submit" class="btn btn-primary">Registar</button>

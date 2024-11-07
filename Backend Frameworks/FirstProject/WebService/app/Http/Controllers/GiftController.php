@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gift;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -25,17 +26,36 @@ class GiftController extends Controller
     public function removeGift($id)
     {
         $this->removeSelectedItemFromDatabase($id);
-        return back();
+        return redirect()->route("gifts.show")->with("gift_remove","Prenda removida com sucesso!");
     }
 
     public function form()
     {
-        return view("gifts.gifts_form");
+        $users = $this->receiveUsers();
+
+        return view("gifts.gifts_form",compact("users"));
     }
 
     public function add(Request $request)
     {
 
+        $request->validate([
+            "name" => "string|max:30",
+            "valorPrevisto" => "string|",
+            "valorGasto" => "string",
+            "user" => "string"
+        ]);
+
+        // dd($request->all());
+
+        Gift::insert([
+            "name" => $request->name,
+            "valuePreview" => $request->valorPrevisto,
+            "valueSpend" => $request->valorGasto,
+            "user_fk" => $request->user
+        ]);
+
+        return redirect()->route("gifts.show")->with("gift_message","Prenda adicionadas com sucesso!");
     }
 
     private function receiveGifsFromDatabase()
@@ -60,5 +80,11 @@ class GiftController extends Controller
         DB::table("gifts")
         ->where("id",$id)
         ->delete();
+    }
+
+    private function receiveUsers()
+    {
+        return DB::table("users")
+        ->get();
     }
 }

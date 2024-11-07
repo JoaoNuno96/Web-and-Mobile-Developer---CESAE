@@ -2,16 +2,60 @@
 
 @section('content')
 
-
-
 @if(session('Message'))
+        <script>
+            var div = document.createElement("div");
+            div.id = "updatePop"
+            div.className = "alert alert-success";
+            div.role = "alert";
+            div.innerHTML = '{{session("Message")}}';
 
-        <div class="alert alert-success" role="alert">
-            {{ session("Message" )}}
-        </div>
-        {{-- @script message({{ session("Message" )}}); --}}
+            this.document.getElementById("errors").append(div);
+
+            setTimeout(() => {
+                this.document.getElementById("updatePop").remove();
+            }, 1500);
+        </script>
+@endif
+
+@if(session('update'))
+
+    <script>
+        var div = document.createElement("div");
+        div.id = "updatePop"
+        div.className = "alert alert-warning";
+        div.role = "alert";
+        div.innerHTML = '{{session("update")}}';
+
+        this.document.getElementById("errors").append(div);
+
+        setTimeout(() => {
+            this.document.getElementById("updatePop").remove();
+        }, 1500);
+    </script>
 
 @endif
+
+@if(session('remove_user'))
+
+    <script>
+        var div = document.createElement("div");
+        div.id = "updatePop"
+        div.className = "alert alert-danger";
+        div.role = "alert";
+        div.innerHTML = '{{session("remove_user")}}';
+
+        this.document.getElementById("errors").append(div);
+
+        setTimeout(() => {
+            this.document.getElementById("updatePop").remove();
+        }, 1500);
+    </script>
+
+@endif
+
+
+
 
     <h6>Info do Cesae</h6>
     <ul>
@@ -38,8 +82,10 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->nif }}</td>
-                    <td><a href="{{route('users.show', $user->id)}}" type="button" class="btn btn-success">Ver</a></td>
-                    <td><a href="{{route('users.delete', $user->id)}}" type="button" class="btn btn-danger">Remover</a></td>
+                    <td>
+                        <a href="{{route('users.show', $user->id)}}" type="button" class="btn btn-success">Ver</a>
+                        <a href="{{route('users.delete', $user->id)}}" type="button" class="btn btn-danger">Remover</a>
+                    </td>
                 </tr>
 
 

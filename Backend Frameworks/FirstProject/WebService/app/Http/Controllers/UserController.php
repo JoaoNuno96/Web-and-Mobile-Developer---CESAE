@@ -29,7 +29,7 @@ class UserController extends Controller
 
     public function add(Request $request)
     {
-        dd($request);
+
         $request->validate([
             "name" => "string|required|max:20",
             "email" => "email|required|unique:users",
@@ -45,30 +45,24 @@ class UserController extends Controller
         return redirect()->route("users.all")->with("Message","Contactos adicionados com sucesso");
     }
 
-    public function updateUser()
+    public function updateUser(Request $request)
     {
-        DB::table("user")
-            ->where("name", "joao")
-            ->update([
-                "email" => "joaonuno@teste.pt"
-            ]);
+        $request->validate([
+            "name" => "string|required|max:20",
+            "email" => "email|required",
+            "password" => "min:6|required"
+        ]);
 
-            return Response::Json("sucesso");
-    }
+        DB::table("users")
+        ->where( "id", $request->user)
+        ->update([
+            "name" => $request->name,
+            "email" => $request->email,
+            "address" => $request->morada
+        ]);
 
-    public function updateOrInsertUser()
-    {
-        DB::table("user")
-            ->updateOrInsert(
-                [
-                    "email" => "Pedro@gmail.com",
-                    "password" => "pedro12345"
-                ],
-                [
-                    "name" => "pedro",
-                    "updated_at" => now()
-                ]
-            );
+        return redirect()->route("users.all")->with("update","Utilizador atualizado");
+
     }
 
     public function delete()
@@ -93,12 +87,13 @@ class UserController extends Controller
         return view("users.user_show",compact("user"));
     }
 
+
     public function removeUser($id)
     {
         $this->removeUserTaskFromDatabase($id);
         $this->removeUserFromDatabase($id);
 
-        return back();
+        return redirect()->route("users.all")->with("remove_user","Contacto removido com sucesso");
     }
 
     private function getUserFromDatabase($id)

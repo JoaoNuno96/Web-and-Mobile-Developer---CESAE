@@ -3,7 +3,20 @@ Organizar jira.
 Organizar GitHub.
 reunião cliente
 
-__________________________________PRIMEIRA FASE PESQUISA__________________________________
+POLITICA PRIVACIADADE
+MODAIS PARA LOGIN
+Help
+FAQs
+
+chart js
+FULL CALENDAR API - JS
+
+___________________________PRIMEIRA FASE LEVANTAMENTO NECESSIDADES__________________________________
+
+REUNIAO COM CLIENTE PARA RECOLHA DE NECESSIDADES
+
+
+__________________________________SEGUNDA FASE PESQUISA__________________________________
 
 PRIMEIRO ESBOÇOS
 MODELOS DE BASE DE DADOS
@@ -12,12 +25,25 @@ https://justgo.com.pt/
 https://www.vagamundos.pt/
 
 
-________________________________SEGUNDA FASE ESBOÇO E DECISÕES______________________________
+________________________________TERCEIRA FASE ESBOÇO E DECISÕES______________________________
 
-ESBOÇOS NO FIGMA;
+Estrutura de Website:
+
 
 DECISÔES:
- ->IMAGENS;
- ->TIPOGRAFIA;
- ->CORES;
- ->ANIMAÇÔES;
+ ->RECOLHA DE IMAGENS;
+ ->RECOLHA DE VARIAS TIPOGRAFIAS;
+ ->TESTES DE CORES;
+ ->TIPOS DE ANIMAÇÔES;
+ ->LOGOTIPOS E ICONS;
+ ->USER BOOTSTRAP/TAILWIND/VANILLA CSS
+
+________________________________QUARTA FASE TESTE E DESENVOLVIMENTO______________________________
+
+PRIMEIROS TESTES DE DESENVOLVIMENTO
+
+->CRIAÇÃO DA NAVBAR;
+->CRIAÇÃO DO BANNER;
+->CRIAÇÃO DE ||ROTAS/CONTROLADOR/VIEW|| PARA HOME/POST/PLANEAMENTO DE VIAGENS(GRUPO OU SOLO)/DICAS/SOBRE;
+->CRIAÇÃO DE BASE DE DADOS;
+

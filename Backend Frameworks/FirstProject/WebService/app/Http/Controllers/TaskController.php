@@ -46,6 +46,33 @@ class TaskController extends Controller
         return redirect()->route("task.all")->with("task_message","Tarefa adicionada com sucesso");
     }
 
+    public function removeTask($id)
+    {
+        $this->removeTaskProcess($id);
+
+        return redirect()->route("task.all")->with("task_removido","Tarefa removida com sucesso");
+    }
+
+    public function taskView($id,$userName)
+    {
+        $task = $this->getSingleTask($id);
+        return view("task.viewSingleTask", compact("task","userName"));
+    }
+
+    private function removeTaskProcess($id)
+    {
+        DB::table("task")
+        ->where("id",$id)
+        ->delete();
+    }
+
+    private function getSingleTask($item)
+    {
+        return DB::table("task")
+        ->where("id",$item)
+        ->first();
+    }
+
     private function getUsers()
     {
         return DB::table("users")

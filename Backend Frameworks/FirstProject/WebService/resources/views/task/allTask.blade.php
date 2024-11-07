@@ -1,6 +1,42 @@
 @extends('layout.femaster')
 @section('content')
 
+@if(session('task_message'))
+
+        <script>
+            var div = document.createElement("div");
+            div.id = "updatePop"
+            div.className = "alert alert-success";
+            div.role = "alert";
+            div.innerHTML = '{{session("task_message")}}';
+
+            this.document.getElementById("errors").append(div);
+
+            setTimeout(() => {
+                this.document.getElementById("updatePop").remove();
+            }, 1500);
+        </script>
+
+@endif
+
+@if(session('task_removido'))
+
+        <script>
+            var div = document.createElement("div");
+            div.id = "updatePop"
+            div.className = "alert alert-danger";
+            div.role = "alert";
+            div.innerHTML = '{{session("task_removido")}}';
+
+            this.document.getElementById("errors").append(div);
+
+            setTimeout(() => {
+                this.document.getElementById("updatePop").remove();
+            }, 1500);
+        </script>
+
+@endif
+
 <h4 class="text-center">Table os Task</h4>
 
 <table class="table">
@@ -20,6 +56,11 @@
             <td>{{$task->name}}</td>
             <td>{{$task->description}}</td>
             <td>{{$task->userName}}</td>
+
+            <td>
+                <a href="{{route("task.view.item",[$task->id,$task->userName])}}" class="btn btn-success" >Ver</a>
+                <a href="{{route("task.remove",$task->id)}}" class="btn btn-danger">Remover</a>
+            </td>
         </tr>
         @endforeach
     </tbody>

@@ -3,6 +3,42 @@
 
 <p class="text-center">LISTA PRENDAS</p>
 
+@if (session("gift_message"))
+
+    <script>
+        var div = document.createElement("div");
+        div.id = "updatePop"
+        div.className = "alert alert-success";
+        div.role = "alert";
+        div.innerHTML = '{{session("gift_message")}}';
+
+        this.document.getElementById("errors").append(div);
+
+        setTimeout(() => {
+            this.document.getElementById("updatePop").remove();
+        }, 1500);
+    </script>
+
+@endif
+
+@if (session("gift_remove"))
+
+    <script>
+        var div = document.createElement("div");
+        div.id = "updatePop"
+        div.className = "alert alert-danger";
+        div.role = "alert";
+        div.innerHTML = '{{session("gift_remove")}}';
+
+        this.document.getElementById("errors").append(div);
+
+        setTimeout(() => {
+            this.document.getElementById("updatePop").remove();
+        }, 1500);
+    </script>
+
+@endif
+
 <table class="table">
     <thead>
       <tr>
@@ -24,9 +60,10 @@
             <td>{{$gift->valueSpend}}</td>
             <td>{{$gift->userName}}</td>
             <td>{{$gift->valueSpend < $gift->valuePreview ? "Tu poupaste " : "Tu não poupaste "}}</td>
-            <td><a href="{{route('gifts.show.gift', $gift->id)}}" type="button" class="btn btn-success">Ver</a></td>
-            <td><a href="{{route('gifts.remove', $gift->id)}}" type="button" class="btn btn-danger">Remover</a></td>
-
+            <td>
+                <a href="{{route('gifts.show.gift', $gift->id)}}" type="button" class="btn btn-success">Ver</a>
+                <a href="{{route('gifts.remove', $gift->id)}}" type="button" class="btn btn-danger">Remover</a>
+            </td>
           </tr>
         @endforeach
 

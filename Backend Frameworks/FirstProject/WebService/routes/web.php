@@ -16,13 +16,15 @@ Route::get("/anotations",[HomeController::class,"anotations"])->name("class.anot
 Route::get('/allUsers', [UserController::class,"users"])->name("users.all");
 Route::get('/form/add', [UserController::class,"form"])->name("users.form");
 Route::post('/form/add/sucess', [UserController::class,"add"])->name("users.add");
+Route::get("/user_show/{id}", [UserController::class, "viewUser"])->name("users.show");
+Route::get("/users_delete/{id}", [UserController::class, "removeUser"])->name("users.delete");
+Route::post('/user/update/sucess', [UserController::class,"updateUser"])->name("users.update");
 
 Route::get('/allTask', [TaskController::class,"getAllTask"])->name("task.all");
 Route::get("/task/form",[TaskController::class,"form"])->name("task.form");
 Route::post("/task/form/add",[TaskController::class,"add"])->name("task.add");
-
-Route::get("/user_show/{id}", [UserController::class, "viewUser"])->name("users.show");
-Route::get("/users_delete/{id}", [UserController::class, "removeUser"])->name("users.delete");
+Route::get("/task/view/{id}/{username}",[TaskController::class,"taskView"])->name("task.view.item");
+Route::get("/task/remove/{id}",[TaskController::class,"removeTask"])->name("task.remove");
 
 Route::get("/gifts", [GiftController::class, "showGifs"])->name("gifts.show");
 Route::get("/gifts/show/{id}", [GiftController::class, "showGiftSingle"])->name("gifts.show.gift");
