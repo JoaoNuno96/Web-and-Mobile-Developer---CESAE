@@ -55,14 +55,19 @@
 @endif
 
 
-
-
     <h6>Info do Cesae</h6>
     <ul>
         <li>{{ $cesaeInfo['name'] }}</li>
         <li>{{ $cesaeInfo['address'] }}</li>
         <li>{{ $cesaeInfo['email'] }}</li>
     </ul>
+
+    <form method="get">
+        <input type="text" name="search" id="" value="{{ request()->query("search") }}" placeholder="Digite Nome ou Email de Utilizador" />
+        <button class="btn btn-secondary btn-sm">Filtrar</button>
+    </form>
+
+
     <h3>Sou uma blade para todos os users </h3>
     <table class="table">
         <thead>

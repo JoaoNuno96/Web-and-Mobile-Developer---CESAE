@@ -25,6 +25,7 @@ Route::get("/task/form",[TaskController::class,"form"])->name("task.form");
 Route::post("/task/form/add",[TaskController::class,"add"])->name("task.add");
 Route::get("/task/view/{id}/{username}",[TaskController::class,"taskView"])->name("task.view.item");
 Route::get("/task/remove/{id}",[TaskController::class,"removeTask"])->name("task.remove");
+Route::post("/task/update",[TaskController::class,"update"])->name("task.update");
 
 Route::get("/gifts", [GiftController::class, "showGifs"])->name("gifts.show");
 Route::get("/gifts/show/{id}", [GiftController::class, "showGiftSingle"])->name("gifts.show.gift");

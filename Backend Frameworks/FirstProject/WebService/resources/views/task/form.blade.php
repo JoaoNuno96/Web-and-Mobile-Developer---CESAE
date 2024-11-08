@@ -1,9 +1,6 @@
 @extends('layout.femaster')
 @section('content')
 
-
-
-
   <form action="{{route("task.add")}}" method="POST">
 
     @csrf
@@ -37,8 +34,6 @@
 
         @endforeach
     </select>
-
-
 
     <button type="submit" class="btn btn-primary">Registar</button>
   </form>

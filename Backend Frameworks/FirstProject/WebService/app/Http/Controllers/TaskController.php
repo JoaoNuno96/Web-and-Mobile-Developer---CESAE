@@ -56,7 +56,17 @@ class TaskController extends Controller
     public function taskView($id,$userName)
     {
         $task = $this->getSingleTask($id);
-        return view("task.viewSingleTask", compact("task","userName"));
+
+        $users = $this->getUsers();
+
+        return view("task.viewSingleTask", compact("task","users"));
+    }
+
+    public function updateForm($id,$taskUser)
+    {
+        $task = $this->getSingleTask($id);
+        return view("");
+
     }
 
     private function removeTaskProcess($id)
@@ -69,7 +79,7 @@ class TaskController extends Controller
     private function getSingleTask($item)
     {
         return DB::table("task")
-        ->where("id",$item)
+        ->where("task.id",$item)
         ->first();
     }
 
@@ -77,6 +87,13 @@ class TaskController extends Controller
     {
         return DB::table("users")
         ->get();
+    }
+
+    private function getUserFromUsername($username)
+    {
+        return DB::table("users")
+        ->where("name",$username)
+        ->first();
     }
 }
 //

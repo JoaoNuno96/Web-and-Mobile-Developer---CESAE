@@ -14,6 +14,7 @@ class UserController extends Controller
 
     public function allUsers()
     {
+
         return view('users.all_user');
     }
 
@@ -75,8 +76,16 @@ class UserController extends Controller
 
     public function users()
     {
+        $search = request()->query("search") ? request()->query("search") : "";
+
+        $searchNova = (isset($_GET["search"])) ? $_GET["search"] : "";
+
+        // dd(isset($_GET["search"]));
+
         $cesaeInfo = $this->getCesaeInfo();
-        $users = $this-> getAllUsersFromArray();
+
+        $users = $this-> getAllUsersFromArray($search);
+
         return view('users.all_user', compact('cesaeInfo','users'));
     }
 
@@ -111,9 +120,20 @@ class UserController extends Controller
         DB::table("task")->where("user_fk",$id)->delete();
     }
 
-    private function getAllUsersFromArray(){
-        return DB::table("users")
-        ->get();
+    private function getAllUsersFromArray($search){
+
+        $users = DB::table("users");
+
+        if($search)
+        {
+            $users = $users->where("name", "LIKE" , "%{$search}%");
+            $users = $users->orWhere("email", $search);
+        }
+
+        $users = $users->get();
+
+
+        return $users;
      }
 
      private function getCesaeInfo(){
