@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Animal } from '../models/Animal';
 import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,9 @@ export class AnimalServicesService {
     console.log("AnimalServicesService.construct()");
    }
 
-   getAnimal() : Promise<Animal[]>{
-    return new Promise<Animal[]>((result,reject)=>{
-      this.http.get<Animal[]>("http://localhost:3000/animais").subscribe((animais : Animal[]) => { console.log("api:",animais) },(error)=>{});
-    })
-   }
+   getAnimal() : Observable<Animal[]>{
+    return this.http.get<Animal[]>("http://localhost:3000/animais");
+   };
 
    createAnimal(animal : any)
    {

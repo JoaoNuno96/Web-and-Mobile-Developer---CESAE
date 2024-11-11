@@ -17,7 +17,7 @@ export class AnimalComponent {
   animais : Array<any> = [];
 
   constructor(private animalsServices: AnimalServicesService){
-    this.animais = animalsServices.getAnimal();
+    // this.animais = animalsServices.getAnimal();
     console.log(this.animais);
   }
 
@@ -32,5 +32,18 @@ export class AnimalComponent {
     }
     this.animalsServices.createAnimal(animal);
   }
+
+  ngOnInit(){
+    this.animalsServices.getAnimal().subscribe({
+      next: (data) => {
+        this.animais = data;
+      },
+      error: (erro) =>{
+        console.error("Algo deu errado:", erro);
+      }
+    });
+  }
+
+
 
 }
