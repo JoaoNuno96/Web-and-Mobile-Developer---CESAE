@@ -40,10 +40,11 @@ class UserController extends Controller
         User::insert([
             "name" => $request->name,
             "email" => $request->email,
-            "password" => Hash::make($request->senha)
+            "password" => Hash::make($request->senha),
+            "user_type" => 1
         ]);
 
-        return redirect()->route("users.all")->with("Message","Contactos adicionados com sucesso");
+        return redirect()->route("users.all")->with("Message","Contacto adicionado com sucesso");
     }
 
     public function updateUser(Request $request)

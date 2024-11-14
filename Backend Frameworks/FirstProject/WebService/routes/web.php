@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\HomeController;
@@ -32,6 +33,8 @@ Route::get("/gifts/show/{id}", [GiftController::class, "showGiftSingle"])->name(
 Route::get("/gifts/remove/{id}", [GiftController::class, "removeGift"])->name("gifts.remove");
 Route::get("/gifts/form", [GiftController::class, "form"])->name("gifs.form");
 Route::post("/gifts/form/add", [GiftController::class, "add"])->name("gifs.form.add");
+
+Route::get("/dashboard/home", [DashboardController::class, "dashHome"])->name("dashboard.home")->middleware("auth");
 
 //Rota Fallback!!!
 Route::fallback(function(){ return view('fallback.erro'); });

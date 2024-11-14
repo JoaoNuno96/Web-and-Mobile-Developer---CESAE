@@ -29,6 +29,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{route("class.anotations")}}">Class Annotations</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{route("dashboard.home")}}">BackOffice</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Aulas
@@ -50,6 +53,10 @@
                     >
                         Dashboard do {{Auth::user()->name}}
                     </a>
+                    <form method="POST" action="{{route("logout")}}">
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
                 @else
                     <a
                         href="{{ route('login') }}"
