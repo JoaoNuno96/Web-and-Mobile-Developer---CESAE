@@ -58,5 +58,8 @@ ng g enum myEnumName
 ng generate module myModuleName
 ng g module myModuleName 
 
+//API
+$ npx json-server db.json
+npx json-server src/db/app.json
 
 DATA BIDING -> PARTILHAR DADOS COM O HTML DOS COMPOMENTES

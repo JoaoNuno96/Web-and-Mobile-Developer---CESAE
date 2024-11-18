@@ -108,6 +108,9 @@ No input:
 type="file"
 accept="image/*"
 
+SEEDERS
+php artisan db::seed;
+
 
 php artisan make:resource TaskResourceCollection --collection.
 php artisan make:migration add_photo_to_users_table --table=use

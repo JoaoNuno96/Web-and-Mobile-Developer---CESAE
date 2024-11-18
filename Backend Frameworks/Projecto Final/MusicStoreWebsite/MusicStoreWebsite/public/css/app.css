@@ -1,0 +1,30 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
+.carrosel{
+    height: 800px;
+    width: 100%;
+    background-color: black;
+    overflow:hidden;
+    align-items: center;
+}
+
+.jumbo{
+    position: absolute;
+    top: 30vh;
+}
+
+.absoul {
+    position: absolute;
+    left: 35vw;
+  }
+
+  .absoulSecond {
+    position: absolute;
+    top: 55vh;
+    left: 40vw;
+    height: 30px;
+    width: 300px;
+  }

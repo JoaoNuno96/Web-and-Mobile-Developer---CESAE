@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
  */
+//Factory -> fabrica de conteudo real
 class UserFactory extends Factory
 {
     /**

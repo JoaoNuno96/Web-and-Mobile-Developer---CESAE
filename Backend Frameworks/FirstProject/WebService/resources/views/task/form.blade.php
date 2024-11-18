@@ -15,10 +15,14 @@
     @enderror
 
     <br />
+
+    @auth
+
     <div class="form-group">
       <label for="exampleInputPassword1">Descricao</label>
       <input name="descricao" type="text" class="form-control" id="exampleInputPassword1" placeholder="Adicionar Descrição">
     </div>
+    @endauth
 
     @error("descricao")
         <p style="color: red"> Descricao inválido!</p>

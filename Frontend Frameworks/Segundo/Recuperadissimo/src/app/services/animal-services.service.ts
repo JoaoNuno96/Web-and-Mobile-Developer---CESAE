@@ -10,7 +10,6 @@ export class AnimalServicesService {
 
   private animals : Array<Animal> = [];
 
-
   constructor(private http : HttpClient){
     console.log("AnimalServicesService.construct()");
    }
