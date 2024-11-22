@@ -86,6 +86,8 @@ use Illuminate\Support\Facades\Hash;
 
 
 FILE STORAGE 
+use Illuminate\Support\Facades\Storage;
+
 Storage::url(‘aminhaimagem.img’) -> retorna o caminho através do servidor.
 Storage::path(‘aminhaimagem.img’) -> retorna o caminho na nossa aplicação.
 Storage:: exists(‘aminhaimagem.img’) -> retorna true ou false conforme exista ou não
@@ -124,3 +126,21 @@ php artisan migrate
 //ROTAS DE WEB PHP NAO APARECEM EM route:list
 php artisan route:cache 
 php artisan route:clear
+
+
+//FORTIFY
+
+//IR PARA QUALQUER ROTA APOS LOGIN
+
+põe isto no teu fortifyserviceprovider e encaminha para onde queres    public function register(): void
+    {
+        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
+            public function toResponse($request)
+            {
+                return redirect('/home');
+            }
+        });
+    }
+ 
+    /**
+

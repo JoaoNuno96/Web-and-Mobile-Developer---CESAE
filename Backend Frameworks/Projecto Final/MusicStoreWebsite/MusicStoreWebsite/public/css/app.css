@@ -28,3 +28,9 @@
     height: 30px;
     width: 300px;
   }
+
+  .quadrado{
+    border: 1px solid #FFF;
+    height: 80px;
+    width: 150px;
+  }

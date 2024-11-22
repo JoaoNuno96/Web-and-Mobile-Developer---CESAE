@@ -63,7 +63,7 @@
     </ul>
 
     <form method="get">
-        <input type="text" name="search" id="" value="{{ request()->query("search") }}" placeholder="Digite Nome ou Email de Utilizador" />
+        <input type="text" name="procura" id="" value="{{ request()->query("procura") }}" placeholder="Digite Nome ou Email de Utilizador" />
         <button class="btn btn-secondary btn-sm">Filtrar</button>
     </form>
 

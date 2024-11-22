@@ -13,6 +13,11 @@
     <p class="text-light text-center">BAND: {{$album->bandName}}</p>
     <p class="text-light text-center">DATE: {{$album->date}}</p>
 
+    @auth
+        <div class="col-12 text-center">
+            <a href="{{route("album.form.change",$album->id)}}" class="btn btn-primary">Edit</a>
+        </div>
+    @endauth
 </div>
 
 @endsection
